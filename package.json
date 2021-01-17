@@ -1,0 +1,23 @@
+{
+  "name": "xelticamc-web",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vuedx-typecheck . && vite build"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "vue": "^3.0.5",
+    "vue-router": "^4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.0.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vuedx/typecheck": "^0.4.1",
+    "@vuedx/typescript-plugin-vue": "^0.4.1",
+    "sass": "^1.32.4",
+    "typescript": "^4.1.3",
+    "vite": "^2.0.0-beta.12",
+    "vite-plugin-voie": "^0.7.3"
+  }
+}

@@ -1,0 +1,25 @@
+<template>
+    <section class="addr">
+        <div style="margin-right: 1em">アドレス</div>
+        <div class="box"><slot/></div>
+    </section>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({});
+</script>
+
+<style lang="scss" scoped>
+.addr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .box {
+        border: 2px solid #ccc;
+        padding: 8px;
+        width: max-content;
+    }
+}
+</style>
