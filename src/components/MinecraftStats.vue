@@ -1,17 +1,62 @@
 <template>
-    <h2>現在サーバーにいる人</h2>
-    <p>0/0</p>
-    <p>工事中</p>
+    <h2>サーバーの状態</h2>
+    <template v-if="state.stat">
+        <p>バージョン：{{state.stat.software}} {{state.stat.version}}</p>
+        <p>ユーザー数: {{state.stat.players.online}}</p>
+        <ul v-for="item in (state.stat.players.list || [])" :key="item">
+            <li v-text="item" />
+        </ul>
+    </template>
+    <div v-else-if="state.error" class="error">
+        取得に失敗しました。エラー: {{state.error.message}}
+    </div>
+    <div v-else class="loading">
+        取得中…
+    </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted, onUnmounted, reactive, ref } from 'vue';
+
+type ServerStatus = Record<string, unknown> | null;
+
+let statCache: ServerStatus;
+
 export default defineComponent({
     setup() {
-        
-    }
+        const state = reactive({
+            stat: statCache,
+            error: null as Error | null,
+        });
+
+        const fetchData = () => {
+            fetch('https://api.mcsrvstat.us/2/craft.xeltica.work').then(async res => {
+                state.stat = statCache = await res.json();
+            }).catch(err => {
+                state.error = err;
+            });
+        };
+
+        const handleRef = ref(-1);
+
+        onMounted(() => {
+            fetchData();
+        });
+
+        return {
+            state,
+        };
+    },
 })
 </script>
 
 <style lang="scss" scoped>
+.error {
+    color: red;
+    font-weight: bold;
+}
+.loading {
+    font-style: oblique;
+    opacity: 0.7;
+}
 </style>

@@ -53,15 +53,26 @@ header {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 16px;
+}
+
 .container {
+    position: relative;
     background: rgba(0, 0, 0, 0.8);
+    padding: 32px 0;
     /* backdrop-filter: blur(8px); */
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.8);
-    padding: 32px;
     max-width: 800px;
     min-height: 100vh;
     margin: auto;
     box-sizing: border-box;
+}
+
+.view {
+  padding: 32px;
 }
 
 h1, h2, a {
