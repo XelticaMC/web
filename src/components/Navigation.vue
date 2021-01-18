@@ -76,6 +76,7 @@ export default defineComponent({
         align-items: center;
         justify-content: center;
         width: 100%;
+        text-decoration: none;
         &:not(:first-child) {
             border-left: 1px solid rgba(0, 0, 0, 0.2);
         }

@@ -75,7 +75,7 @@ footer {
   padding: 32px;
 }
 
-h1, h2, a {
+h1, h2, h3, h4, h5, h6, a {
   color: var(--accent);
   &.active {
     color: white;
