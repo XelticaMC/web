@@ -3,7 +3,7 @@
     <header>
         <h1>XelticaMC</h1>
         <p>XelticaMC は、Xelticaが管理するマインクラフトサーバーです。</p>
-        <Address>craft.xeltica.work</Address>
+        <Address>play.craft.xeltica.work</Address>
     </header>
     <Navigation />
     <div class="view">
