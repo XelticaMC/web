@@ -33,7 +33,7 @@ export default defineComponent({
         });
 
         const fetchData = () => {
-            fetch('https://api.mcsrvstat.us/2/craft.xeltica.work').then(async res => {
+            fetch('https://api.mcsrvstat.us/2/play.craft.xeltica.work').then(async res => {
                 state.stat = statCache = await res.json();
             }).catch(err => {
                 state.error = err;
