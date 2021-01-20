@@ -3,8 +3,11 @@
     <template v-if="state.stat">
         <p>バージョン：{{state.stat.software}} {{state.stat.version}}</p>
         <p>ユーザー数: {{state.stat.players.online}}</p>
-        <ul v-for="item in (state.stat.players.list || [])" :key="item">
-            <li v-text="item" />
+        <ul class="users" v-for="item in (state.stat.players.list || [])" :key="item">
+            <li class="user">
+                <img class="avatar" :src="`https://crafatar.com/avatars/${state.stat.players.uuid[item]}?overlay`"/>
+                <span class="name" v-text="item"/>
+            </li>
         </ul>
     </template>
     <div v-else-if="state.error" class="error">
@@ -58,5 +61,20 @@ export default defineComponent({
 .loading {
     font-style: oblique;
     opacity: 0.7;
+}
+
+.users {
+    > .user {
+        display: flex;
+        align-items: center;
+        > .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+        }
+        > .name {
+            margin-left: 16px;
+        }
+    }
 }
 </style>
