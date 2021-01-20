@@ -11,6 +11,7 @@
     </div>
     <footer>
         <p>(C)2021 Xeltica</p>
+        <p><small class="revision" v-text="revision" /></p>
     </footer>
   </div>
 </template>
@@ -19,6 +20,7 @@
 import { defineComponent } from 'vue';
 import Address from './components/Address.vue';
 import Navigation from './components/Navigation.vue';
+import revision from './revision';
 
 export default defineComponent({
   name: 'App',
@@ -28,7 +30,7 @@ export default defineComponent({
   },
   data() {
     return {
-      
+      revision,
     }
   },
   methods: {
@@ -91,5 +93,9 @@ table {
         padding: 8px;
         border: 1px solid #333;
     }
+}
+
+.revision {
+  opacity: 0.5;
 }
 </style>

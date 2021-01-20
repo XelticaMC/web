@@ -2,8 +2,16 @@
     <div class="dummy" ref="dummy" />
     <nav class="list" ref="list">
         <template v-for="item in nav">
+            <span
+                v-if="item.preparing"
+                :key="item.to"
+                class="item disabled"
+                v-text="item.name"
+            />
             <a
-                v-if="item.external"
+                v-else-if="item.external"
+                target="_blank"
+                rel="noopener norefferer"
                 :key="item.to"
                 :href="item.to"
                 class="item"
@@ -50,9 +58,9 @@ export default defineComponent({
             dummy,
             nav: [
                 { to: '/', name: '情報', },
-                { to: '/play', name: '遊び方', },
                 { to: '/rule', name: 'ルール', },
                 { to: '//map.craft.xeltica.work', name: 'マップ', external: true },
+                { to: '//wiki.craft.xeltica.work', name: '工事中', preparing: true },
             ],
         };
     }
@@ -83,6 +91,9 @@ export default defineComponent({
         &.active {
             background: rgba(0, 0, 0, 0.5);
             color: white;
+        }
+        &.disabled {
+            opacity: 0.5;
         }
     }
 
