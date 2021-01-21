@@ -5,8 +5,18 @@
     <router-link to="/how-it-works">仕組み</router-link>
   </p>
   <ul>
-      <li>Minecraft Java Edition 1.16.4</li>
-      <li>Minecraft 統合版 1.16.2xx</li>
+      <li>
+        Minecraft Java Edition 1.16.4および1.16.5
+        <ul>
+          <li>ポート: 25565</li>
+        </ul>
+      </li>
+      <li>
+        Minecraft 統合版 v1.16.100〜v1.16.201
+        <ul>
+          <li>ポート: 19132</li>
+        </ul>
+      </li>
   </ul>
   <p>
       技術的な問題により、現在統合版でログインするとスキンが他者からはデフォルトの物に見えてしまいます。
