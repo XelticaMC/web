@@ -26,6 +26,14 @@ export default defineComponent({
     return {
       plugins: [
         {
+            name: 'Geyser-Spigot',
+            description: '統合版ユーザーも入れるようにするプラグイン',
+        },
+        {
+            name: 'floodgate-bukkit',
+            description: '統合版ユーザーがJava版のライセンスを持っていなくても入れるようにするプラグイン',
+        },
+        {
             name: 'DiscordSRV',
             description: 'Discord 連携プラグイン',
         },
@@ -38,16 +46,24 @@ export default defineComponent({
             description: 'チャットにて、日本語変換をサーバーで行ってくれるプラグイン',
         },
         {
-            name: 'Geyser-Spigot',
-            description: '統合版ユーザーも入れるようにするプラグイン',
-        },
-        {
-            name: 'floodgate-bukkit',
-            description: '統合版ユーザーがJava版のライセンスを持っていなくても入れるようにするプラグイン',
-        },
-        {
             name: 'PlugMan',
             description: 'プラグインの個別リロード機能などを持った管理プラグイン',
+        },
+        {
+            name: 'ChestCleaner',
+            description: 'チェスト整頓プラグイン',
+        },
+        {
+            name: 'LuckPerms',
+            description: '権限管理プラグイン',
+        },
+        {
+            name: 'GSit',
+            description: 'その場で座る/寝る/泳ぐモーションが行えるプラグイン',
+        },
+        {
+            name: 'NickNames',
+            description: '自分にニックネームをつけられるプラグイン',
         },
       ],
     };
