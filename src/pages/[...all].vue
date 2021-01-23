@@ -1,12 +1,12 @@
 <template>
-    <h2>Not Found</h2>
+	<h2>Not Found</h2>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'Fallback',
+	name: 'Fallback',
 });
 </script>
 

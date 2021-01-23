@@ -5,14 +5,14 @@ import Components from 'vite-plugin-components';
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    voie({
-      importMode: 'async',
-    }),
-    Components({
-      customComponentResolvers: ViteIconsResolver(),
-    }),
-    ViteIcons(),
-  ],
+	plugins: [
+		vue(),
+		voie({
+			importMode: 'async',
+		}),
+		Components({
+			customComponentResolvers: ViteIconsResolver(),
+		}),
+		ViteIcons(),
+	],
 });

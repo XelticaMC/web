@@ -10,11 +10,11 @@ import * as Themes from './theme';
 Themes.syncTheme();
 
 const router = createRouter({
-    routes,
-    history: createWebHistory(),
+	routes,
+	history: createWebHistory(),
 });
 
 
 createApp(App)
-    .use(router)
-    .mount('#app');
+	.use(router)
+	.mount('#app');

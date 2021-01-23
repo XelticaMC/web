@@ -1,51 +1,51 @@
 html {
-    --bg: #fff;
-    --containerBg: rgba(255, 255, 255, 0.8);
-    --bgImage: url(./assets/day.jpg);
-    --fg: #222;
-    --accent: rgb(30, 172, 2);
-    --linkActive: var(--fg);
-    --tableBg: #eee;
-    --tableBorder: #ccc;
-    --divider: #aaa;
-    --navActiveBg: rgba(255, 255, 255, 0.5);
-    --navStickBg: rgba(255, 255, 255, 0.5);
+		--bg: #fff;
+		--containerBg: rgba(255, 255, 255, 0.8);
+		--bgImage: url(./assets/day.jpg);
+		--fg: #222;
+		--accent: rgb(30, 172, 2);
+		--linkActive: var(--fg);
+		--tableBg: #eee;
+		--tableBorder: #ccc;
+		--divider: #aaa;
+		--navActiveBg: rgba(255, 255, 255, 0.5);
+		--navStickBg: rgba(255, 255, 255, 0.5);
 
-  &.dark {
-    --bg: #222;
-    --containerBg: rgba(40, 40, 40, 0.7);
-    --bgImage: url(./assets/night.jpg);
-    --fg: #fff;
-    --accent: rgb(160, 236, 145);
-    --tableBg: #111;
-    --tableBorder: #333;
-    --divider: #333;
-    --navActiveBg: rgba(0, 0, 0, 0.5);
-    --navStickBg: rgba(0, 0, 0, 0.5);
-  }
+	&.dark {
+		--bg: #222;
+		--containerBg: rgba(40, 40, 40, 0.7);
+		--bgImage: url(./assets/night.jpg);
+		--fg: #fff;
+		--accent: rgb(160, 236, 145);
+		--tableBg: #111;
+		--tableBorder: #333;
+		--divider: #333;
+		--navActiveBg: rgba(0, 0, 0, 0.5);
+		--navStickBg: rgba(0, 0, 0, 0.5);
+	}
 }
 
 body {
-    width: 100%;
-    margin: 0 auto;
-    background-color: var(--bg);
-    color: var(--fg);
-    background-image: var(--bgImage);
-    background-attachment: fixed;
-    background-size: cover;
+		width: 100%;
+		margin: 0 auto;
+		background-color: var(--bg);
+		color: var(--fg);
+		background-image: var(--bgImage);
+		background-attachment: fixed;
+		background-size: cover;
 }
 
 footer {
-  text-align: center;
-  border-top: 1px solid var(--divider);
-  margin-top: 16px;
+	text-align: center;
+	border-top: 1px solid var(--divider);
+	margin-top: 16px;
 }
 
 h1, h2, h3, h4, h5, h6, a {
-  color: var(--accent);
-  &.active {
-    color: var(--linkActive);
-  }
+	color: var(--accent);
+	&.active {
+		color: var(--linkActive);
+	}
 }
 
 h1 { font-size: 1.6rem; }
@@ -56,12 +56,22 @@ h5 { font-size: 1.1rem; }
 h6 { font-size: 1rem; }
 
 table {
-    background-color: var(--tableBg);
-    border-collapse: collapse;
+		background-color: var(--tableBg);
+		border-collapse: collapse;
 
-    th, td {
-        text-align: left;
-        padding: 8px;
-        border: 1px solid var(--tableBorder);
-    }
+		th, td {
+				text-align: left;
+				padding: 8px;
+				border: 1px solid var(--tableBorder);
+		}
+}
+
+dl {
+	margin: 0;
+	> dt {
+		float: left;
+		clear: left;
+		margin-right: 8px;
+		font-weight: bold;
+	}
 }
