@@ -1,9 +1,18 @@
 <template>
 	<div class="root">
-		<Main class="main" @sidebarActivated="sidebarOpened = true" />
+		<Main class="main" />
 		<div class="backdrop" :class="{ active: sidebarOpened }" @click="sidebarOpened = false"/>
-		<Sidebar class="sidebar" :class="{ active: sidebarOpened }" />
+		<Sidebar class="sidebar" :class="{ active: sidebarOpened }">
+			<template #extop>
+				<button class="close" @click="sidebarOpened = false">
+					<i-ic-close/>
+				</button>
+			</template>
+		</Sidebar>
 	</div>
+	<button class="sidebar-button" @click="sidebarOpened = true">
+		<i-ic-menu />
+	</button>
 </template>
 
 <script lang="ts">
@@ -34,6 +43,13 @@ export default defineComponent({
 
 	> .main {
 		max-width: 800px;
+		width: 100%;
+	}
+
+	> .sidebar {
+		> .close {
+			display: none;
+		}
 	}
 
 	@media screen and (max-width: 1024px) {
@@ -44,10 +60,21 @@ export default defineComponent({
 			height: auto;
 			background: var(--bg);
 			overflow: auto;
+			box-shadow: none;
 			right: -320px;
 			margin: 0;
 			transition: all 0.2s ease;
 			z-index: 2;
+
+			> .close {
+				display: block;
+				margin-left: auto;
+				font-size: 24px;
+				border: none;
+				background: none;
+				color: var(--accent);
+				outline: none;
+			}
 
 			&.active {
 				right: 0;
@@ -68,6 +95,34 @@ export default defineComponent({
 				background: rgba(0, 0, 0, 0.5);
 			}
 		}
+	}
+}
+
+.sidebar-button {
+	position: fixed;
+	right: -1px;
+	bottom: -1px;
+	width: 64px;
+	height: 64px;
+	background: var(--acrylic);
+	border-radius: 16px 0 0 0;
+	outline: none;
+	border: none;
+	color: var(--fg);
+	font-size: 24px;
+
+	&:hover {
+		filter: brightness(120%);
+	}
+
+	&:active {
+		filter: brightness(60%);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.sidebar-button {
+		display: none;
 	}
 }
 </style>

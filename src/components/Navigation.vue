@@ -5,7 +5,7 @@
 			<h1>XelticaMC</h1>
 			<Address>play.craft.xeltica.work</Address>
 		</header>
-		<nav class="list">
+		<!-- <nav class="list">
 			<template v-for="item in nav">
 				<span
 					v-if="item.preparing"
@@ -32,7 +32,7 @@
 					v-text="item.name"
 				/>
 			</template>
-		</nav>
+		</nav> -->
 	</div>
 </template>
 
@@ -88,6 +88,7 @@ header {
 
 	> h1 {
 	margin: 0;
+	color: var(--accent);
 	}
 
 	@media screen and (max-width: 525px) {

@@ -7,13 +7,13 @@
 	</p>
 	<ul>
 			<li>
-				Minecraft Java Edition 1.16.4および1.16.5
+				Java Edition 1.16.4　1.16.5
 				<ul>
 					<li>ポート: 25565</li>
 				</ul>
 			</li>
 			<li>
-				Minecraft 統合版 v1.16.100〜v1.16.201
+				統合版 v1.16.100〜v1.16.201
 				<ul>
 					<li>ポート: 19132</li>
 				</ul>
@@ -22,9 +22,8 @@
 	<p>
 			技術的な問題により、現在統合版でログインするとスキンが他者からはデフォルトの物に見えてしまいます。
 	</p>
-	<Plugins />
-	<Links />
 	<Discord style="margin-top: 32px"/>
+	<Plugins />
 </template>
 
 <script lang="ts">

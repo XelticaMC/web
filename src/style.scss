@@ -9,6 +9,7 @@ html {
 		--tableBorder: #ccc;
 		--divider: #aaa;
 		--navActiveBg: rgba(255, 255, 255, 0.5);
+		--acrylic: rgba(255, 255, 255, 0.5);
 		--navStickBg: rgba(255, 255, 255, 0.5);
 
 	&.dark {
@@ -21,6 +22,7 @@ html {
 		--tableBorder: #333;
 		--divider: #333;
 		--navActiveBg: rgba(0, 0, 0, 0.5);
+		--acrylic: rgba(0, 0, 0, 0.5);
 		--navStickBg: rgba(0, 0, 0, 0.5);
 	}
 }
@@ -41,8 +43,9 @@ footer {
 	margin-top: 16px;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+a {
 	color: var(--accent);
+	text-decoration: none;
 	&.active {
 		color: var(--linkActive);
 	}
@@ -74,4 +77,26 @@ dl {
 		margin-right: 8px;
 		font-weight: bold;
 	}
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+
+  > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.hstack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  > *:not(:last-child) {
+    margin-right: 16px;
+  }
 }

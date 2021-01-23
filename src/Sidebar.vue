@@ -1,25 +1,31 @@
 <template>
-	<div class="sidebar">
+	<div class="sidebar vstack">
+		<slot name="extop"/>
 		<MinecraftStats />
+		<Links />
 		<iframe
 			class="widget"
 			src="https://discord.com/widget?id=759661786105905152&theme=dark"
-			height="500"
 			allowtransparency="true"
 			frameborder="0"
 			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
 		></iframe>
+		<ThemeSettings />
 	</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import MinecraftStats from "./components/MinecraftStats.vue";
+import Links from "./components/Links.vue";
+import ThemeSettings from "./components/ThemeSettings.vue";
 
 export default defineComponent({
 	name: "Sidebar",
 	components: {
 		MinecraftStats,
+		Links,
+		ThemeSettings,
 	},
 	setup() {},
 });
@@ -41,6 +47,7 @@ export default defineComponent({
 
 	> .widget {
 		width: 100%;
+		min-height: 500px
 	}
 }
 </style>
