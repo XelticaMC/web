@@ -80,18 +80,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.dummy {
-}
-
 header {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  padding: 0 32px;
-  padding-top: 16px;
+  padding: 16px 32px;
 
   > h1 {
-    margin-top: 0;
+    margin: 0;
     /* font-size: 1.6rem; */
   }
 
@@ -122,9 +118,10 @@ header {
         justify-content: center;
         width: 100%;
         text-decoration: none;
+        border-bottom: 2px solid var(--divider);
         &.active {
-            background: var(--navActiveBg);
             color: var(--linkActive);
+            border-color: var(--accent);
         }
         &.disabled {
             opacity: 0.5;
