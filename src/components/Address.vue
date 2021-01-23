@@ -1,6 +1,5 @@
 <template>
     <section class="addr">
-        <div style="margin-right: 1em">アドレス</div>
         <div class="box"><slot/></div>
     </section>
 </template>

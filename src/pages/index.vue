@@ -1,4 +1,5 @@
 <template>
+  <p>XelticaMC は、Xelticaが管理するマインクラフトサーバーです。</p>
   <h2>バージョン</h2>
   <p>
     Java版、統合版、両方から入ることができます。

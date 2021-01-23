@@ -1,10 +1,5 @@
 <template>
   <div class="container">
-    <header>
-        <h1>XelticaMC</h1>
-        <p>XelticaMC は、Xelticaが管理するマインクラフトサーバーです。</p>
-        <Address>play.craft.xeltica.work</Address>
-    </header>
     <Navigation />
     <div class="view">
       <RouterView />
@@ -18,14 +13,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Address from './components/Address.vue';
 import Navigation from './components/Navigation.vue';
 import revision from './revision';
 
 export default defineComponent({
   name: 'App',
   components: {
-    Address,
     Navigation,
   },
   data() {
@@ -77,10 +70,6 @@ body {
     background-size: cover;
 }
 
-header {
-  text-align: center;
-}
-
 footer {
   text-align: center;
   border-top: 1px solid var(--divider);
@@ -90,7 +79,7 @@ footer {
 .container {
     position: relative;
     background: var(--containerBg);
-    padding: 32px 0;
+    padding-bottom: 16px;
     /* backdrop-filter: blur(8px); */
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.8);
     max-width: 800px;
@@ -100,7 +89,7 @@ footer {
 }
 
 .view {
-  padding: 32px;
+  padding: 0 32px;
 }
 
 h1, h2, h3, h4, h5, h6, a {
@@ -109,6 +98,13 @@ h1, h2, h3, h4, h5, h6, a {
     color: var(--linkActive);
   }
 }
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
 
 table {
     background-color: var(--tableBg);
