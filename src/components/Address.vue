@@ -17,7 +17,8 @@ export default defineComponent({});
     align-items: center;
 
     .box {
-        border: 2px solid #ccc;
+        border: 2px solid var(--tableBorder);
+        background: var(--tableBg);
         padding: 8px;
         width: max-content;
     }

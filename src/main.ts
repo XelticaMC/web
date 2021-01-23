@@ -5,6 +5,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import routes from 'voie-pages';
 
 import App from './App.vue';
+import * as Themes from './theme';
+
+Themes.syncTheme();
 
 const router = createRouter({
     routes,

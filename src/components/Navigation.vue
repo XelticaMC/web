@@ -85,12 +85,12 @@ export default defineComponent({
         justify-content: center;
         width: 100%;
         text-decoration: none;
-        &:not(:first-child) {
-            border-left: 1px solid rgba(0, 0, 0, 0.2);
-        }
+        /* &:not(:first-child) {
+            border-left: 1px solid var(--divider);
+        } */
         &.active {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
+            background: var(--navActiveBg);
+            color: var(--linkActive);
         }
         &.disabled {
             opacity: 0.5;
@@ -98,7 +98,7 @@ export default defineComponent({
     }
 
     &.stick {
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--navStickBg);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
     }
