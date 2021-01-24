@@ -2,7 +2,11 @@
 	<div class="sidebar _vstack">
 		<slot name="extop"/>
 		<MinecraftStats />
+		<hr>
 		<Links />
+		<hr>
+		<ThemeSettings />
+		<hr>
 		<iframe
 			class="widget"
 			src="https://discord.com/widget?id=759661786105905152&theme=dark"
@@ -10,7 +14,7 @@
 			frameborder="0"
 			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
 		></iframe>
-		<ThemeSettings />
+		<hr>
 	</div>
 </template>
 

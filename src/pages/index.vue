@@ -22,7 +22,11 @@
 		<section>
 			<h2>本当のクロスプレイ</h2>
 			<p>本来一緒に遊ぶことのできない<strong>Java版</strong>と<strong>統合版</strong>によるクロスプレイを実現。</p>
-			<p>今まで持っているマイクラのエディションが違うために遊べなかった友達とも、<br/>XelticaMCでなら遊べます！</p>
+			<p>
+				今まで持っているマイクラのエディションが違うために遊べなかった友達とも、<br/>XelticaMCでなら遊べます！
+				<RouterLink to="how-it-works">仕組み</RouterLink>
+			</p>
+
 			<table>
 				<tbody>
 					<tr>
@@ -127,13 +131,14 @@ section {
 	h1 {
 		font-size: 2rem;
 	}
-	> .hero {
+	&.hero {
 		padding-top: 64px;
 		padding-bottom: 32px;
 	}
 }
 
 section + section {
+	padding-top: 16px;
 	border-top: 1px solid var(--divider);
 }
 
