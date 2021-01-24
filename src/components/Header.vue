@@ -2,37 +2,11 @@
 	<div class="dummy" ref="dummy" />
 	<div class="wrapper" ref="wrapper">
 		<header>
-			<h1>XelticaMC</h1>
+			<h1>
+				<RouterLink to="/">XelticaMC</RouterLink>
+			</h1>
 			<Address>play.craft.xeltica.work</Address>
 		</header>
-		<!-- <nav class="list">
-			<template v-for="item in nav">
-				<span
-					v-if="item.preparing"
-					:key="item.to"
-					class="item disabled"
-					v-text="item.name"
-				/>
-				<a
-					v-else-if="item.external"
-					target="_blank"
-					rel="noopener norefferer"
-					:key="item.to"
-					:href="item.to"
-					class="item"
-					active-class="active"
-					v-text="item.name"
-				/>
-				<RouterLink
-					v-else
-					:key="item.to"
-					:to="item.to"
-					class="item"
-					active-class="active"
-					v-text="item.name"
-				/>
-			</template>
-		</nav> -->
 	</div>
 </template>
 
@@ -68,12 +42,6 @@ export default defineComponent({
 		return {
 			wrapper,
 			dummy,
-			nav: [
-				{ to: '/', name: '情報', },
-				{ to: '/rule', name: 'ルール', },
-				{ to: '//map.craft.xeltica.work', name: 'マップ', external: true },
-				{ to: '//wiki.craft.xeltica.work', name: '工事中', preparing: true },
-			],
 		};
 	}
 })
@@ -87,12 +55,11 @@ header {
 	padding: 16px 32px;
 
 	> h1 {
-	margin: 0;
-	color: var(--accent);
+		margin: 0;
 	}
 
 	@media screen and (max-width: 525px) {
-	flex-direction: column;
+		flex-direction: column;
 	}
 }
 

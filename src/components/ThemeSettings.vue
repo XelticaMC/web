@@ -1,6 +1,5 @@
 <template>
-	<h2>設定</h2>
-	<h3>テーマ</h3>
+	<h2>テーマ</h2>
 	<ul style="list-style: none; margin: 0; padding: 0">
 		<li>
 			<label>

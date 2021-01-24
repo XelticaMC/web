@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<Navigation />
+		<Header />
 		<div class="view">
 			<RouterView />
 		</div>
@@ -14,13 +14,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import Navigation from './components/Navigation.vue';
+import Header from './components/Header.vue';
 import revision from './revision';
 
 export default defineComponent({
 	name: 'Main',
 	components: {
-		Navigation,
+		Header,
 	},
 	setup(_, ctx) {
 		return {

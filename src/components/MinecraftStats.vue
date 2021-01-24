@@ -77,7 +77,7 @@ h2 {
 
 	> .user {
 		margin-bottom: 1px;
-		padding: 8px;
+		padding: 0 8px;
 		display: flex;
 		align-items: center;
 		> .avatar {
