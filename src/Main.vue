@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<Header />
+		<Header v-if="showHeader" />
 		<div class="view">
 			<RouterView />
 		</div>
@@ -12,19 +12,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-
+import { computed, defineComponent } from 'vue';
+import { useRoute } from 'vue-router';
 import Header from './components/Header.vue';
 import revision from './revision';
+
 
 export default defineComponent({
 	name: 'Main',
 	components: {
 		Header,
 	},
-	setup(_, ctx) {
+	setup() {
+		const route = useRoute();
 		return {
 			revision,
+			showHeader: computed(() => route.path !== '/'),
 		}
 	},
 });
@@ -42,6 +45,9 @@ export default defineComponent({
 
 .view {
 	padding: 0 32px;
+	@media screen and (max-width: 768px) {
+		padding: 0 16px;
+	}
 }
 
 .revision {

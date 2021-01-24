@@ -1,9 +1,9 @@
 html {
-		--bg: #fff;
+		--bg: #FAFAFA;
 		--containerBg: rgba(255, 255, 255, 0.8);
 		--bgImage: url(./assets/day.jpg);
-		--fg: #222;
-		--accent: rgb(30, 172, 2);
+		--fg: #263238;
+		--accent: #4CAF50;
 		--linkActive: var(--fg);
 		--tableBg: #eee;
 		--tableBorder: #ccc;
@@ -13,11 +13,11 @@ html {
 		--navStickBg: rgba(255, 255, 255, 0.5);
 
 	&.dark {
-		--bg: #222;
+		--bg: #263238;
 		--containerBg: rgba(40, 40, 40, 0.7);
 		--bgImage: url(./assets/night.jpg);
-		--fg: #fff;
-		--accent: rgb(160, 236, 145);
+		--accent: #FF5722;
+		--fg: #FAFAFA;
 		--tableBg: #111;
 		--tableBorder: #333;
 		--divider: #333;
@@ -30,11 +30,16 @@ html {
 body {
 		width: 100%;
 		margin: 0 auto;
+		font-size: 18px;
 		background-color: var(--bg);
 		color: var(--fg);
 		background-image: var(--bgImage);
 		background-attachment: fixed;
 		background-size: cover;
+
+		@media screen and (max-width: 640px) {
+			font-size: 16px;
+		}
 }
 
 footer {
@@ -79,7 +84,7 @@ dl {
 	}
 }
 
-.vstack {
+._vstack {
   display: flex;
   flex-direction: column;
 	align-items: stretch;
@@ -90,7 +95,7 @@ dl {
   }
 }
 
-.hstack {
+._hstack {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -99,4 +104,20 @@ dl {
   > *:not(:last-child) {
     margin-right: 16px;
   }
+}
+
+img {
+	max-width: 100%;
+	&.responsive {
+		width: 100%;
+	}
+}
+
+._caption {
+	font-size: 0.8rem;
+}
+
+hr {
+	height: 1px;
+	background: var(--divider);
 }

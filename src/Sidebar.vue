@@ -1,5 +1,5 @@
 <template>
-	<div class="sidebar vstack">
+	<div class="sidebar _vstack">
 		<slot name="extop"/>
 		<MinecraftStats />
 		<Links />

@@ -1,19 +1,21 @@
 <template>
-	<h2>導入プラグイン</h2>
-	<table>
-	<thead>
-		<tr>
-			<th>名前</th>
-			<th>説明</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr v-for="plugin in plugins" :key="plugin.name">
-			<td v-text="plugin.name" />
-			<td v-text="plugin.description" />
-		</tr>
-	</tbody>
-	</table>
+	<section>
+		<h2>導入プラグイン</h2>
+		<table>
+		<thead>
+			<tr>
+				<th>名前</th>
+				<th>説明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr v-for="plugin in plugins" :key="plugin.name">
+				<td v-text="plugin.name" />
+				<td v-text="plugin.description" />
+			</tr>
+		</tbody>
+		</table>
+	</section>
 </template>
 
 <script lang='ts'>
