@@ -44,25 +44,6 @@
 					「Java版」「統合版」の意味がわからない方へ
 				</RouterLink>
 			</p>
-			<!-- <h2>バージョン</h2>
-			<p>
-				Java版、統合版、両方から入ることができます。
-				<RouterLink to="/how-it-works">仕組み</RouterLink>
-			</p>
-			<ul>
-					<li>
-						Java Edition 1.16.4　1.16.5
-						<ul>
-							<li>ポート: 25565</li>
-						</ul>
-					</li>
-					<li>
-						統合版 v1.16.100〜v1.16.201
-						<ul>
-							<li>ポート: 19132</li>
-						</ul>
-					</li>
-			</ul> -->
 		</section>
 		<section>
 			<h2>参加する！</h2>
@@ -77,7 +58,6 @@
 			</dl>
 		</section>
 		<Discord />
-		<Plugins />
 	</article>
 </template>
 

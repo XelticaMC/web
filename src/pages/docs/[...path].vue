@@ -1,10 +1,10 @@
 <template>
 	<NotFound v-if="isError" />
-	<article v-else v-html="doc.body" />
+	<article v-else-if="doc" v-html="doc.body" />
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watchEffect } from 'vue';
+import { defineComponent, onMounted, ref, watch, watchEffect } from 'vue';
 
 import NotFound from '../../components/NotFound.vue';
 import { Document, getDocument } from '../../utils/getDocument';
@@ -20,10 +20,10 @@ export default defineComponent({
 			required: true,
 		},
 	},
-	setup({path}) {
+	setup(props) {
 		const doc = ref<Document | null>(null);
 		const isError = ref<boolean>(false);
-		watchEffect(async () => {
+		const loadPage = async (path: string) => {
 			isError.value = false;
 			doc.value = null;
 			try {
@@ -31,10 +31,17 @@ export default defineComponent({
 			} catch {
 				isError.value = true;
 			}
+		};
+		watch(() => props, ({path}) => {
+			loadPage(path);
+		}, {
+			deep: true,
 		});
 
+		onMounted(() => loadPage(props.path));
+
 		return {
-			path, doc, isError,
+			doc, isError,
 		};
 	}
 });
