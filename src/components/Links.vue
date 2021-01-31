@@ -12,32 +12,36 @@
 		<h2>機能紹介</h2>
 		<ul>
 			<li>
-				便利系
+				<b>便利系</b>
 				<ul>
-					<li>工事中</li>
-					<!-- <li><RouterLink to="/plugins/japanize">日本語変換</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/inventory-cleaner">インベントリ整理</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/dynmap">マップ</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/discordsrv">Discord連携</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/for-be">統合版向け便利コマンド</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/link-account">Java版↔統合版アカウント紐付け</RouterLink></li> -->
+					<li><RouterLink to="/docs/plugins/jp">日本語変換</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/cleaner">インベントリ整理</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/maps">マップ</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/discord">Discord連携</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/geyser">統合版向け便利コマンド</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/link-account">Java版↔統合版 リンク</RouterLink></li>
 				</ul>
 			</li>
 			<li>
-				お楽しみ系
+				<b>お楽しみ系</b>
 				<ul>
-					<li>工事中</li>
-					<!-- <li><RouterLink to="/plugins/nickname">ニックネーム</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/sit">座る/泳ぐ/寝る</RouterLink></li> -->
+					<li><RouterLink to="/docs/plugins/nickname">ニックネーム</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/hat">帽子</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/sit">座る/泳ぐ/寝る</RouterLink></li>
 				</ul>
 			</li>
 			<li>
-				管理用
+				<b>セキュリティ</b>
 				<ul>
-					<li>工事中</li>
-					<!-- <li><RouterLink to="/plugins/luckperms">LuckPerms</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/plugman">PlugMan</RouterLink></li> -->
-					<!-- <li><RouterLink to="/plugins/modifyworld">ModifyWorldUpdate</RouterLink></li> -->
+					<li><RouterLink to="/docs/plugins/lwc">チェスト保護(LWC)</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/coreprotect">荒らし復元</RouterLink></li>
+				</ul>
+			</li>
+			<li>
+				<b>管理用</b>
+				<ul>
+					<li><RouterLink to="/docs//plugins/luckperms">LuckPerms</RouterLink></li>
+					<li><RouterLink to="/docs//plugins/plugman">PlugMan</RouterLink></li>
 				</ul>
 			</li>
 		</ul>

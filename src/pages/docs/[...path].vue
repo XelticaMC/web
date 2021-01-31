@@ -1,6 +1,11 @@
 <template>
 	<NotFound v-if="isError" />
-	<article v-else-if="doc" v-html="doc.body" />
+	<template v-else-if="doc">
+		<header>
+			<h1 v-text="doc.title" />
+		</header>
+		<article v-html="doc.body" />
+	</template>
 </template>
 
 <script lang="ts">

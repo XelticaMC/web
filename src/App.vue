@@ -40,6 +40,8 @@ export default defineComponent({
 	min-height: 100vh;
 	justify-content: center;
 	position: relative;
+	transition: opacity 0.5s ease;
+	opacity: 1;
 
 	> .main {
 		max-width: 800px;

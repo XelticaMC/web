@@ -67,7 +67,6 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import Address from '../components/Address.vue';
 import Discord from '../components/Discord.vue';
-import Plugins from '../components/Plugins.vue';
 import MinecraftStats from '../components/MinecraftStats.vue';
 import Links from '../components/Links.vue';
 
@@ -85,7 +84,6 @@ export default defineComponent({
 
 		Address,
 		Discord,
-		Plugins,
 		MinecraftStats,
 		Links,
 	},
