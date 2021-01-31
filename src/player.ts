@@ -14,7 +14,7 @@ export const fetchPlayers = async () => {
 	hasError.value = false;
 	isFetching.value = true;
 	try {
-		const res = await fetch('http://api.craft.xeltica.work/v1/players');
+		const res = await fetch('https://api.craft.xeltica.work/v1/players');
 		const p: Player[] = await res.json();
 		players.value = p;
 	} catch (e) {

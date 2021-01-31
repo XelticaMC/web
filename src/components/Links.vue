@@ -7,6 +7,7 @@
 		<!-- <li><RouterLink to="">ギャラリー</RouterLink></li> -->
 		<!-- <li><RouterLink to="">ランキング</RouterLink></li> -->
 		<!-- <li><RouterLink to="">Wiki</RouterLink></li> -->
+		<li><RouterLink to="/plugins">導入プラグイン</RouterLink></li>
 	</ul>
 	<section>
 		<h2>機能紹介</h2>

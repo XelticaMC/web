@@ -15,7 +15,7 @@ export const fetchPlugins = async () => {
 	hasError.value = false;
 	isFetching.value = true;
 	try {
-		const res = await fetch('http://api.craft.xeltica.work/v1/plugins');
+		const res = await fetch('https://api.craft.xeltica.work/v1/plugins');
 		const p: Plugin[] = await res.json();
 		plugins.value = p;
 	} catch (e) {
