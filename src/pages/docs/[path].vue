@@ -1,0 +1,54 @@
+<template>
+	<NotFound v-if="isError" />
+	<article v-else v-html="doc.body" />
+</template>
+
+<script lang="ts">
+import { defineComponent, ref, watchEffect } from 'vue';
+
+import NotFound from '../../components/NotFound.vue';
+import { Document, getDocument } from '../../utils/getDocument';
+
+export default defineComponent({
+	name: 'Docs',
+	components: {
+		NotFound,
+	},
+	props: {
+		path: {
+			type: String,
+			required: true,
+		},
+	},
+	setup({path}) {
+		const doc = ref<Document | null>(null);
+		const isError = ref<boolean>(false);
+		watchEffect(async () => {
+			isError.value = false;
+			doc.value = null;
+			try {
+				doc.value = await getDocument(path);
+			} catch {
+				isError.value = true;
+			}
+		});
+
+		return {
+			path, doc, isError,
+		};
+	}
+});
+</script>
+
+<style lang="scss" scoped>
+	div {
+		text-align: center;
+
+		img {
+			max-width: 100%;
+			max-height: 480px;
+			box-shadow: 0 2px 8px black;
+			box-sizing: border-box;
+		}
+	}
+</style>
