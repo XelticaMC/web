@@ -5,11 +5,14 @@
 			<h1 v-text="doc.title" />
 		</header>
 		<article v-html="doc.body" />
+		<footer>
+			<a :href="url">このドキュメントをGitHubで改善する</a>
+		</footer>
 	</template>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, watch, watchEffect } from 'vue';
+import { computed, defineComponent, onMounted, ref, watch, watchEffect } from 'vue';
 
 import NotFound from '../../components/NotFound.vue';
 import { Document, getDocument } from '../../utils/getDocument';
@@ -28,6 +31,7 @@ export default defineComponent({
 	setup(props) {
 		const doc = ref<Document | null>(null);
 		const isError = ref<boolean>(false);
+		const url = computed(() => `https://github.com/XelticaMC/web/edit/master/public/docs/${props.path}.md`);
 		const loadPage = async (path: string) => {
 			isError.value = false;
 			doc.value = null;
@@ -46,7 +50,7 @@ export default defineComponent({
 		onMounted(() => loadPage(props.path));
 
 		return {
-			doc, isError,
+			doc, isError, url,
 		};
 	}
 });

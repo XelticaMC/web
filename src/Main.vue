@@ -53,4 +53,10 @@ export default defineComponent({
 .revision {
 	opacity: 0.5;
 }
+
+footer {
+	text-align: center;
+	border-top: 1px solid var(--divider);
+	margin-top: 16px;
+}
 </style>
