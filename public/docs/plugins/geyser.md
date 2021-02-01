@@ -13,5 +13,5 @@
 |コマンド名|説明|
 |-|-|
 |/geyser offhand|手持ちのアイテムをオフハンドに持ち替えます|
-|/geyser advancement|進捗を表示します|
+|/geyser advancements|進捗を表示します|
 |/geyser statistics|統計を表示します|

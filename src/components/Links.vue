@@ -5,7 +5,6 @@
 		<li><a href="https://map.craft.xeltica.work" target="_blank" rel="noopener noreferrer">ウェブマップ</a></li>
 		<!-- <li><RouterLink to="">スキンアップローダー</RouterLink></li> -->
 		<!-- <li><RouterLink to="">ギャラリー</RouterLink></li> -->
-		<!-- <li><RouterLink to="">ランキング</RouterLink></li> -->
 		<!-- <li><RouterLink to="">Wiki</RouterLink></li> -->
 		<li><RouterLink to="/plugins">導入プラグイン</RouterLink></li>
 	</ul>
