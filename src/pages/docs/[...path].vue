@@ -17,6 +17,8 @@ import { computed, defineComponent, onMounted, ref, watch, watchEffect } from 'v
 import NotFound from '../../components/NotFound.vue';
 import { Document, getDocument } from '../../utils/getDocument';
 
+const cache: Record<string, Document> = {};
+
 export default defineComponent({
 	name: 'Docs',
 	components: {
@@ -34,10 +36,11 @@ export default defineComponent({
 		const url = computed(() => `https://github.com/XelticaMC/web/edit/master/public/docs/${props.path}.md`);
 		const loadPage = async (path: string) => {
 			isError.value = false;
-			doc.value = null;
+			doc.value = cache[path];
 			try {
-				doc.value = await getDocument(path);
+				cache[path] = doc.value = await getDocument(path);
 			} catch {
+				doc.value = null;
 				isError.value = true;
 			}
 		};
