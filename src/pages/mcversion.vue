@@ -67,12 +67,16 @@
 
 <script lang="ts">
 //
+import { useHead } from '@vueuse/head';
 import { computed, defineComponent, ref } from 'vue';
 export default defineComponent({
 	name: 'McVersion',
 	setup() {
 		const platform = ref<string | null>(null);
 		const is = ref<string | null>(null);
+		useHead({
+			title: 'Java版と統合版の違い - XelticaMC'
+		});
 		return {
 			platform, is,
 			isBedrock: computed(() =>

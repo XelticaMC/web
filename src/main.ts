@@ -6,6 +6,7 @@ import routes from 'voie-pages';
 
 import App from './App.vue';
 import * as Themes from './theme';
+import { createHead } from '@vueuse/head';
 
 Themes.syncTheme();
 
@@ -32,4 +33,5 @@ const router = createRouter({
 
 createApp(App)
 	.use(router)
+	.use(createHead())
 	.mount('#app');

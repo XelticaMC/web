@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts">
+import { useHead } from '@vueuse/head';
 import { computed, defineComponent, onMounted, ref, watch, watchEffect } from 'vue';
 
 import NotFound from '../../components/NotFound.vue';
@@ -52,6 +53,13 @@ export default defineComponent({
 
 		onMounted(() => loadPage(props.path));
 
+		const title = computed(() => (doc.value?.title || '') + ' - XelticaMC');
+
+    useHead({
+      // Can be static or computed
+      title,
+    })
+
 		return {
 			doc, isError, url,
 		};
@@ -69,5 +77,9 @@ export default defineComponent({
 			box-shadow: 0 2px 8px black;
 			box-sizing: border-box;
 		}
+	}
+
+	footer {
+		margin-top: 16px;
 	}
 </style>

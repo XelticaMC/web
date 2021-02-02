@@ -36,8 +36,14 @@
 </template>
 
 <script lang="ts">
+import { useHead } from '@vueuse/head';
 import { defineComponent } from 'vue';
 export default defineComponent({
 	name: 'HowItWorks',
+	setup() {
+		useHead({
+			title: '仕組み - XelticaMC'
+		});
+	},
 })
 </script>

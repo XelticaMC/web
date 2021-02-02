@@ -12,6 +12,13 @@
 		<h2>機能紹介</h2>
 		<ul>
 			<li>
+				<b>経済</b>
+				<ul>
+					<li><RouterLink to="/docs/money">お金</RouterLink></li>
+					<li><RouterLink to="/docs/earn">お金を稼ぐ</RouterLink></li>
+				</ul>
+			</li>
+			<li>
 				<b>便利系</b>
 				<ul>
 					<li><RouterLink to="/docs/plugins/jp">日本語変換</RouterLink></li>
@@ -20,6 +27,7 @@
 					<li><RouterLink to="/docs/plugins/discord">Discord連携</RouterLink></li>
 					<li><RouterLink to="/docs/plugins/geyser">統合版向け便利コマンド</RouterLink></li>
 					<li><RouterLink to="/docs/plugins/link-account">Java版↔統合版 リンク</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/fly">飛行</RouterLink></li>
 				</ul>
 			</li>
 			<li>

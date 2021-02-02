@@ -28,6 +28,7 @@
 </template>
 
 <script lang='ts'>
+import { useHead } from '@vueuse/head';
 import { defineComponent } from 'vue';
 
 import { plugins, isFetching, hasError } from '../plugins';
@@ -36,6 +37,9 @@ export default defineComponent({
 	name: 'Plugins',
 
 	setup() {
+		useHead({
+			title: '導入プラグイン - XelticaMC'
+		});
 		return {
 			plugins,
 			isFetching,

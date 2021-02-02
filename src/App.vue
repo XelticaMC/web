@@ -16,6 +16,7 @@
 </template>
 
 <script lang="ts">
+import { useHead } from '@vueuse/head';
 import { defineComponent, ref } from 'vue';
 import Main from './Main.vue';
 import Sidebar from './Sidebar.vue';
@@ -27,6 +28,9 @@ export default defineComponent({
 		Sidebar,
 	},
 	setup() {
+    useHead({
+      title: 'XelticaMC',
+    });
 		return {
 			sidebarOpened: ref(false),
 		}
