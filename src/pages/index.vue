@@ -57,6 +57,13 @@
 				<dd>19132</dd>
 			</dl>
 		</section>
+		<section>
+			<h2>シェア</h2>
+			<p>
+				サーバーで起きた出来事を自由にシェアしてください。
+				<strong style="color: var(--accent)">#XelticaMC</strong> ハッシュタグの使用をおすすめしています。
+			</p>
+		</section>
 		<Discord />
 	</article>
 </template>
