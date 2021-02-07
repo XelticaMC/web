@@ -36,6 +36,7 @@
 					<li><RouterLink to="/docs/plugins/nickname">ニックネーム</RouterLink></li>
 					<li><RouterLink to="/docs/plugins/hat">帽子</RouterLink></li>
 					<li><RouterLink to="/docs/plugins/sit">座る/泳ぐ/寝る</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/omikuji">おみくじ</RouterLink></li>
 				</ul>
 			</li>
 			<li>

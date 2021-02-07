@@ -109,10 +109,6 @@ section {
 	h1 {
 		font-size: 2rem;
 	}
-	&.hero {
-		padding-top: 64px;
-		padding-bottom: 32px;
-	}
 }
 
 section + section {

@@ -13,9 +13,6 @@
 		取得に失敗しました。
 		<button @click="fetchPlayers">再試行</button>
 	</div>
-	<div v-if="isFetching" class="loading">
-		取得中…
-	</div>
 </template>
 
 <script lang="ts">
