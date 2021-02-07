@@ -1,7 +1,7 @@
 <template>
 	<ul>
-		<li><RouterLink to="/docs/rule">ルール</RouterLink></li>
-		<!-- <li><RouterLink to="/worlds">ワールド紹介</RouterLink></li> -->
+		<li><RouterLink to="/docs/rule">利用規約</RouterLink></li>
+		<li><RouterLink to="/docs/worlds">ワールド紹介</RouterLink></li>
 		<li><a href="https://map.craft.xeltica.work" target="_blank" rel="noopener noreferrer">ウェブマップ</a></li>
 		<!-- <li><RouterLink to="">スキンアップローダー</RouterLink></li> -->
 		<!-- <li><RouterLink to="">ギャラリー</RouterLink></li> -->

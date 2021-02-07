@@ -47,15 +47,20 @@
 		</section>
 		<section>
 			<h2>参加する！</h2>
-			<p>興味が湧いてきたら、ぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
-			<dl class="addrs">
-				<dt>アドレス</dt>
-				<dd>play.craft.xeltica.work</dd>
-				<dt>ポート(Java版)</dt>
-				<dd>25565</dd>
-				<dt>ポート(統合版)</dt>
-				<dd>19132</dd>
-			</dl>
+			<p>もし興味がありましたら、<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上でぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
+
+			<details>
+				<summary>利用規約を読んだ</summary>
+				<dl class="addrs">
+					<dt>アドレス</dt>
+					<dd>play.craft.xeltica.work</dd>
+					<dt>ポート(Java版)</dt>
+					<dd>25565</dd>
+					<dt>ポート(統合版)</dt>
+					<dd>19132</dd>
+				</dl>
+			</details>
+
 		</section>
 		<section>
 			<h2>シェア</h2>
