@@ -6,7 +6,6 @@
 		</div>
 		<footer>
 				<p>(C)2021 Xeltica</p>
-				<p><small class="revision" v-text="revision" /></p>
 		</footer>
 	</div>
 </template>
@@ -15,8 +14,6 @@
 import { computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import Header from './components/Header.vue';
-import revision from './revision';
-
 
 export default defineComponent({
 	name: 'Main',
@@ -26,7 +23,6 @@ export default defineComponent({
 	setup() {
 		const route = useRoute();
 		return {
-			revision,
 			showHeader: computed(() => route.path !== '/'),
 		}
 	},
