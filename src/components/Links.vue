@@ -16,6 +16,7 @@
 				<ul>
 					<li><RouterLink to="/docs/money">お金</RouterLink></li>
 					<li><RouterLink to="/docs/earn">お金を稼ぐ</RouterLink></li>
+					<li><RouterLink to="/docs/plugins/shop">ショップを開業する</RouterLink></li>
 				</ul>
 			</li>
 			<li>
