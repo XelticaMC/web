@@ -16,6 +16,10 @@ export const fetchPlayers = async () => {
 	try {
 		const res = await fetch('https://api.craft.xeltica.work/v1/players');
 		const p: Player[] = await res.json();
+		p.forEach(pl => {
+			// TODO: HTMLにマッピングして色対応する
+			pl.displayName = pl.displayName.replace(/§[a-z0-9]/g, '');
+		});
 		players.value = p;
 	} catch (e) {
 		console.error(e);
