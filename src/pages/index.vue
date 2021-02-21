@@ -3,6 +3,9 @@
 		<section class="hero">
 			<h1>XelticaMC</h1>
 			<p>始めよう、本当のBetter Togetherを。</p>
+			<div class="caution">
+				<RouterLink to="/docs/news/maintain20200221">メンテナンスのお知らせ</RouterLink>
+			</div>
 			<Carousel wrapAround class="carousel">
 				<Slide v-for="slide in slides" :key="slide">
 					<img :src="slide" :alt="slide" class="slide" />
@@ -174,6 +177,18 @@ section + section {
 	svg {
 		width: 32px;
 		height: 32px;
+	}
+}
+
+.caution {
+	border: 2px solid red;
+	color: red;
+	text-align: center;
+	padding: 8px 0;
+
+	> a {
+		color: inherit;
+		text-decoration: underline;
 	}
 }
 </style>
