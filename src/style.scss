@@ -4,6 +4,7 @@ html {
 		--containerBg: rgba(255, 255, 255, 0.8);
 		--bgImage: url(./assets/day.jpg);
 		--fg: #263238;
+		--fgbold: #000000;
 		--accent: #4CAF50;
 		--linkActive: var(--fg);
 		--tableBg: #eee;
@@ -18,7 +19,8 @@ html {
 		--containerBg: rgba(40, 40, 40, 0.7);
 		--bgImage: url(./assets/night.jpg);
 		--accent: #FF5722;
-		--fg: #FAFAFA;
+		--fg: #E0E0E0;
+		--fgbold: #FFFFFF;
 		--tableBg: #111;
 		--tableBorder: #333;
 		--divider: #333;
@@ -31,6 +33,7 @@ html {
 body {
 		width: 100%;
 		margin: 0 auto;
+		line-height: 1.8;
 		background-color: var(--bg);
 		color: var(--fg);
 		background-image: var(--bgImage);
@@ -60,6 +63,10 @@ h6 { font-size: 1rem; }
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	line-height: 2em;
+}
+
+b, strong {
+	color: var(--fgbold);
 }
 
 table {
