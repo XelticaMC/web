@@ -17,7 +17,8 @@
 
 <script lang="ts">
 import { useHead } from '@vueuse/head';
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import Main from './Main.vue';
 import Sidebar from './Sidebar.vue';
 
@@ -28,11 +29,16 @@ export default defineComponent({
 		Sidebar,
 	},
 	setup() {
+		const sidebarOpened = ref(false);
+		const route = useRoute();
     useHead({
       title: 'XelticaMC',
     });
+		watch(route, () => {
+			sidebarOpened.value = false;
+		}, { deep: true });
 		return {
-			sidebarOpened: ref(false),
+			sidebarOpened,
 		}
 	},
 });
