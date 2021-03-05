@@ -64,6 +64,8 @@
 				</dl>
 			</details>
 
+			<p>細かい遊び方は、<RouterLink to="/docs/walkthrough">あるきかた</RouterLink>をご確認ください！</p>
+
 		</section>
 		<section>
 			<h2>シェア</h2>
