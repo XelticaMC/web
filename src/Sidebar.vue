@@ -7,13 +7,13 @@
 		<hr>
 		<ThemeSettings />
 		<hr>
-		<iframe
+		<!-- <iframe
 			class="widget"
 			src="https://discord.com/widget?id=759661786105905152&theme=dark"
 			allowtransparency="true"
 			frameborder="0"
 			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-		></iframe>
+		></iframe> -->
 		<hr>
 	</div>
 </template>
