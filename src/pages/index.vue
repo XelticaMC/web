@@ -3,9 +3,9 @@
 		<section class="hero">
 			<h1>XelticaMC</h1>
 			<p>始めよう、本当のBetter Togetherを。</p>
-			<!-- <div class="caution">
-				<RouterLink to="/docs/news/maintain20200221">メンテナンスのお知らせ</RouterLink>
-			</div> -->
+			<div class="caution">
+				<RouterLink to="/docs/news/new-role-citizen">「市民」システムが導入されました</RouterLink>
+			</div>
 			<Carousel wrapAround class="carousel">
 				<Slide v-for="slide in slides" :key="slide">
 					<img :src="slide" :alt="slide" class="slide" />
