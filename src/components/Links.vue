@@ -60,7 +60,7 @@
 	<section>
 		<h2>その他</h2>
 		<ul>
-				<li><a href="https://misskey.io/@ebi">XelticaのMisskey</a></li>
+				<li><a href="https://twitter.com/XelticaMC">XelticaMC 公式Twitter</a></li>
 				<li><a href="https://twitter.com/@adxlw">XelticaのTwitter</a></li>
 		</ul>
 	</section>
