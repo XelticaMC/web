@@ -6,15 +6,6 @@
 		<Links />
 		<hr>
 		<ThemeSettings />
-		<hr>
-		<!-- <iframe
-			class="widget"
-			src="https://discord.com/widget?id=759661786105905152&theme=dark"
-			allowtransparency="true"
-			frameborder="0"
-			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-		></iframe> -->
-		<hr>
 	</div>
 </template>
 
@@ -48,10 +39,5 @@ export default defineComponent({
 	min-height: 100vh;
 	height: max-content;
 	box-sizing: border-box;
-
-	> .widget {
-		width: 100%;
-		min-height: 500px
-	}
 }
 </style>

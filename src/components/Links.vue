@@ -10,6 +10,15 @@
 		<li><RouterLink to="/docs/commands">コマンド早見表</RouterLink></li>
 	</ul>
 	<section>
+		<h2>情報</h2>
+		<ul>
+			<li><RouterLink to="/docs/citizen">昇格システム</RouterLink></li>
+			<li><RouterLink to="/docs/visitor">観光モード</RouterLink></li>
+			<li><RouterLink to="/docs/travel">旅行</RouterLink></li>
+			<li><RouterLink to="/docs/discord">Discord サーバー</RouterLink></li>
+		</ul>
+	</section>
+	<section>
 		<h2>機能紹介</h2>
 		<ul>
 			<li>
