@@ -2,7 +2,7 @@
 	<article>
 		<h1>Java版と統合版の違い</h1>
 		<h2>クイックチェック</h2>
-		<button v-if="platform !== null" @click="platform = null">Q1. 選び直す</button>
+		<button v-if="platform !== null" @click="reset">Q1. 選び直す</button>
 		<template v-else>
 			<p>Q1. どの端末でマイクラをしていますか？</p>
 			<div class="_vstack">
@@ -16,7 +16,7 @@
 			</div>
 		</template>
 		<template v-if="platform === 'pc'">
-			<button v-if="is !== null" @click="is = null">Q2. 選び直す</button>
+			<button v-if="is !== null" @click="reset">Q2. 選び直す</button>
 			<template v-else>
 				<p>Q2. ゲームの起動後、「Minecraft」という文字の下に、小さくJava Editionと書いてありますか？</p>
 				<div class="_vstack">
@@ -84,6 +84,10 @@ export default defineComponent({
 				platform.value === 'console' ||
 				is.value === 'bedrock'
 			),
+			reset: () => {
+			  platform.value = null;
+				is.value = null;
+			},
 		};
 	}
 })
