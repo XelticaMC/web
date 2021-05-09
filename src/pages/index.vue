@@ -67,11 +67,20 @@
 			<div class="addrs" :class="{show: showAddrs}">
 				<dl>
 					<dt>アドレス</dt>
-					<dd>play.craft.xeltica.work</dd>
+					<dd>
+						play.craft.xeltica.work
+						<button class="copy-button" @click="copy('play.craft.xeltica.work')">コピー</button>
+					</dd>
 					<dt>ポート(Java版)</dt>
-					<dd>25565</dd>
+					<dd>
+						25565
+						<button class="copy-button" @click="copy('25565')">コピー</button>
+					</dd>
 					<dt>ポート(統合版)</dt>
-					<dd>19132</dd>
+					<dd>
+						19132
+						<button class="copy-button" @click="copy('19132')">コピー</button>
+					</dd>
 				</dl>
 			</div>
 
@@ -136,6 +145,14 @@ export default defineComponent({
 				'press/turtle.jpg',
 				'press/bear.jpg',
 			],
+			copy(content: string) {
+				if (navigator.clipboard) {
+					navigator.clipboard.writeText(content);
+					alert('クリップボードにコピーしました！');
+				} else {
+					alert('お使いの端末では、残念ながら利用できません。\n手動コピーをお願いします！');
+				}
+			}
 		};
 	},
 });
@@ -163,21 +180,31 @@ section + section {
 }
 
 .addrs {
-	color: black;
-	background: #ccc;
 	display: block;
 	margin-top: 8px;
-	max-height: 0;
+	height: 0;
 	box-sizing: border-box;
 	overflow: hidden;
-	transition: max-height 0.2s ease;
 	&.show {
-		max-height: 120px;
+		height: auto;
 	}
 	> dl {
-		padding: 8px;
 		> dt {
 			width: 140px;
+		}
+		> dd {
+			display: flex;
+			align-items: center;
+		}
+		@media (max-width: 415px) {
+			> dt, > dd {
+				width: auto;
+				float: none;
+				display: block;
+			}
+			> dd {
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -207,6 +234,21 @@ section + section {
 	&.active::before {
 		content: '▼';
 		transform: rotate(-180deg);
+	}
+}
+
+.copy-button {
+	border-radius: 6px;
+	background: var(--bg);
+	border: 1px solid var(--accent);
+	color: var(--accent);
+	padding: 2px;
+	font-size: 9px;
+	font-weight: bold;
+	margin-left: 8px;
+	cursor: pointer;
+	&:active {
+		filter: brightness(0.8);
 	}
 }
 </style>
