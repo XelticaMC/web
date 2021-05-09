@@ -113,14 +113,15 @@ export default defineComponent({
 .sidebar-button {
 	position: fixed;
 	right: -1px;
-	bottom: -1px;
+	top: 64px;
 	width: 64px;
 	height: 64px;
-	background: var(--acrylic);
-	border-radius: 16px 0 0 0;
+	background: var(--bg);
+	border-radius: 16px 0 0 16px;
 	outline: none;
 	border: none;
-	color: var(--fg);
+	color: var(--accent);
+	box-shadow: 0 0 16px #00000030;
 	font-size: 24px;
 
 	&:hover {
