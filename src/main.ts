@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import routes from 'voie-pages';
 
 import App from './App.vue';
+import NotFound from './components/NotFound.vue';
 import * as Themes from './theme';
 import { createHead } from '@vueuse/head';
 
@@ -14,8 +15,15 @@ const router = createRouter({
 	routes: [
 		...routes,
 		{
-			path: '/rule',
-			redirect: _ => '/docs/rule',
+			path: '/docs/rule',
+			redirect: _ => '/rule',
+		},
+		{
+			path: '/docs/:path(.*)',
+			redirect: to => {
+				window.location.href = (`https://wiki.craft.xeltica.work/${to.params.path}`);
+				return '';
+			},
 		}
 	],
 	history: createWebHistory(),

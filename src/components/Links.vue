@@ -1,71 +1,11 @@
 <template>
 	<ul>
-		<li><RouterLink to="/docs/rule">利用規約</RouterLink></li>
-		<li><RouterLink to="/docs/worlds">ワールド紹介</RouterLink></li>
+		<li><RouterLink to="/rule">利用規約</RouterLink></li>
 		<li><a href="https://map.craft.xeltica.work" target="_blank" rel="noopener noreferrer">ウェブマップ</a></li>
 		<!-- <li><RouterLink to="">ギャラリー</RouterLink></li> -->
-		<!-- <li><RouterLink to="">Wiki</RouterLink></li> -->
-		<li><RouterLink to="/docs/walkthrough">あるきかた</RouterLink></li>
 		<li><RouterLink to="/plugins">導入プラグイン</RouterLink></li>
-		<li><RouterLink to="/docs/commands">コマンド早見表</RouterLink></li>
+		<li><a href="https://wiki.craft.xeltica.work">Wiki</a></li>
 	</ul>
-	<section>
-		<h2>情報</h2>
-		<ul>
-			<li><RouterLink to="/docs/citizen">昇格システム</RouterLink></li>
-			<li><RouterLink to="/docs/visitor">観光モード</RouterLink></li>
-			<li><RouterLink to="/docs/travel">旅行</RouterLink></li>
-			<li><RouterLink to="/docs/discord">Discord サーバー</RouterLink></li>
-		</ul>
-	</section>
-	<section>
-		<h2>機能紹介</h2>
-		<ul>
-			<li>
-				<b>経済</b>
-				<ul>
-					<li><RouterLink to="/docs/money">お金</RouterLink></li>
-					<li><RouterLink to="/docs/earn">お金を稼ぐ</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/shop">ショップを開業する</RouterLink></li>
-				</ul>
-			</li>
-			<li>
-				<b>便利系</b>
-				<ul>
-					<li><RouterLink to="/docs/plugins/jp">日本語変換</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/cleaner">インベントリ整理</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/maps">マップ</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/discord">Discord連携</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/geyser">統合版向け便利コマンド</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/link-account">Java版↔統合版 リンク</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/fly">飛行</RouterLink></li>
-				</ul>
-			</li>
-			<li>
-				<b>お楽しみ系</b>
-				<ul>
-					<li><RouterLink to="/docs/plugins/nickname">ニックネーム</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/hat">帽子</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/sit">座る/泳ぐ/寝る</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/omikuji">おみくじ</RouterLink></li>
-				</ul>
-			</li>
-			<li>
-				<b>セキュリティ</b>
-				<ul>
-					<li><RouterLink to="/docs/plugins/lwc">チェスト保護(LWC)</RouterLink></li>
-					<li><RouterLink to="/docs/plugins/coreprotect">荒らし復元</RouterLink></li>
-				</ul>
-			</li>
-			<li>
-				<b>管理用</b>
-				<ul>
-					<li><RouterLink to="/docs//plugins/luckperms">LuckPerms</RouterLink></li>
-					<li><RouterLink to="/docs//plugins/plugman">PlugMan</RouterLink></li>
-				</ul>
-			</li>
-		</ul>
-	</section>
 	<section>
 		<h2>その他</h2>
 		<ul>

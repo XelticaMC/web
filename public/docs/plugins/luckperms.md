@@ -1,3 +1,0 @@
-# LuckPerms
-
-coming soon
