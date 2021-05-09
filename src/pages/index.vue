@@ -3,8 +3,8 @@
 		<section class="hero">
 			<h1>XelticaMC</h1>
 			<p>始めよう、本当のBetter Togetherを。</p>
-			<div class="caution">
-				<RouterLink to="/docs/news/new-role-citizen">「市民」システムが導入されました</RouterLink>
+			<div class="caution" v-if="caution">
+				<RouterLink :to="caution.link">{{ caution.name }}</RouterLink>
 			</div>
 			<Carousel wrapAround class="carousel">
 				<Slide v-for="slide in slides" :key="slide">
@@ -61,9 +61,11 @@
 			<h2>参加する！</h2>
 			<p>もし興味がありましたら、<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上でぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
 
-			<details>
-				<summary>利用規約を読んだ</summary>
-				<dl class="addrs">
+			<button class="btn" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
+				利用規約を読んだ
+			</button>
+			<div class="addrs" :class="{show: showAddrs}">
+				<dl>
 					<dt>アドレス</dt>
 					<dd>play.craft.xeltica.work</dd>
 					<dt>ポート(Java版)</dt>
@@ -71,7 +73,7 @@
 					<dt>ポート(統合版)</dt>
 					<dd>19132</dd>
 				</dl>
-			</details>
+			</div>
 
 			<p>細かい遊び方は、<RouterLink to="/docs/walkthrough">あるきかた</RouterLink>をご確認ください！</p>
 
@@ -88,7 +90,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import Address from '../components/Address.vue';
@@ -99,6 +101,13 @@ import Links from '../components/Links.vue';
 import title from '../assets/title.jpg';
 
 import 'vue3-carousel/dist/carousel.css';
+
+type Caution = {
+	title: string;
+	link: string;
+};
+
+const caution: Caution | null = null;
 
 export default defineComponent({
 	name: 'Index',
@@ -117,6 +126,8 @@ export default defineComponent({
 	setup() {
 		return {
 			title,
+			caution,
+			showAddrs: ref(false),
 			slides: [
 				'press/wheat.jpg',
 				'press/town.jpg',
@@ -152,8 +163,50 @@ section + section {
 }
 
 .addrs {
-	dt {
-		width: 140px;
+	color: black;
+	background: #ccc;
+	display: block;
+	margin-top: 8px;
+	max-height: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	transition: max-height 0.2s ease;
+	&.show {
+		max-height: 120px;
+	}
+	> dl {
+		padding: 8px;
+		> dt {
+			width: 140px;
+		}
+	}
+}
+
+.btn {
+	padding: 8px 16px;
+	color: white;
+	background: var(--accent);
+	border: 0;
+	display: inline-block;
+	border-radius: 8px;
+	cursor: pointer;
+	&:hover {
+		filter: brightness(1.05);
+	}
+	&:active,
+	&.active {
+		filter: brightness(0.9);
+	}
+	&::before {
+		content: '▼';
+		margin-right: 8px;
+		display: inline-block;
+		transform-origin: center;
+		transition: transform 0.2s;
+	}
+	&.active::before {
+		content: '▼';
+		transform: rotate(-180deg);
 	}
 }
 </style>
