@@ -34,11 +34,11 @@
 				<tbody>
 					<tr>
 						<td>Java版</td>
-						<td>1.16.4〜1.17</td>
+						<td>1.17</td>
 					</tr>
 					<tr>
 						<td>統合版</td>
-						<td>1.17.0</td>
+						<td>1.17.0-1.17.2</td>
 					</tr>
 				</tbody>
 			</table>
