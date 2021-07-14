@@ -34,7 +34,7 @@
 				<tbody>
 					<tr>
 						<td>Java版</td>
-						<td>1.17</td>
+						<td>1.17.1</td>
 					</tr>
 					<tr>
 						<td>統合版</td>
