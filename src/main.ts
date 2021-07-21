@@ -9,6 +9,8 @@ import NotFound from './components/NotFound.vue';
 import * as Themes from './theme';
 import { createHead } from '@vueuse/head';
 
+import 'xeltica-ui/dist/css/xeltica-ui.min.css';
+
 Themes.syncTheme();
 
 const router = createRouter({

@@ -1,20 +1,19 @@
 <template>
-	<dl>
-		<dt>ユーザー数</dt>
-		<dd v-text="players.length" />
-	</dl>
-	<ul class="users" v-for="item in featuredPlayers" :key="item.uuid">
-		<li class="user">
-			<img class="avatar" :src="`https://crafatar.com/avatars/${item.uuid}?overlay`" :alt="item.displayName" :title="item.displayName"/>
-			<span class="name" v-text="item.displayName"/>
-		</li>
-	</ul>
-	<div class="faces">
-		<img v-for="item in otherPlayers" :key="item.uuid" class="avatar" :alt="item.displayName" :title="item.displayName" :src="`https://crafatar.com/avatars/${item.uuid}?overlay`"/>
-	</div>
-	<div v-if="hasError" class="error">
-		取得に失敗しました。
-		<button @click="fetchPlayers">再試行</button>
+	<div class="vstack">
+		<div><b>ユーザー数: </b>{{players.length}}</div>
+		<ul class="users" v-for="item in featuredPlayers" :key="item.uuid">
+			<li class="user">
+				<img class="avatar" :src="`https://crafatar.com/avatars/${item.uuid}?overlay`" :alt="item.displayName" :title="item.displayName"/>
+				<span class="name" v-text="item.displayName"/>
+			</li>
+		</ul>
+		<div class="faces" v-if="otherPlayers && otherPlayers.length > 0">
+			<img v-for="item in otherPlayers" :key="item.uuid" class="avatar" :alt="item.displayName" :title="item.displayName" :src="`https://crafatar.com/avatars/${item.uuid}?overlay`"/>
+		</div>
+		<div v-if="hasError" class="error">
+			取得に失敗しました。
+			<button @click="fetchPlayers">再試行</button>
+		</div>
 	</div>
 </template>
 

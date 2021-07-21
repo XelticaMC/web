@@ -1,7 +1,7 @@
 <template>
 	<section>
 		<h2>導入プラグイン</h2>
-		<table v-if="plugins">
+		<table v-if="plugins" class="table">
 		<thead>
 			<tr>
 				<th />

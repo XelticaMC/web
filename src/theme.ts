@@ -28,19 +28,17 @@ export const osTheme = ref<'night' | 'day'>((mq.matches ? 'night' : 'day'));
 
 export const syncTheme = () => {
 	const t = theme.value === 'auto' ? osTheme.value : theme.value;
-	const cl = document.documentElement.classList;
+	const cl = document.body.classList;
 	if (t === 'night') cl.add('dark');
 	else cl.remove('dark');
 };
 
 mq.addEventListener('change', (e) => {
 	osTheme.value = e.matches ? 'night' : 'day';
-	console.log('OS theme is now ' + osTheme.value);
 	syncTheme();
 });
 
 watch(theme, () => {
-	console.log('theme is now ' + theme.value);
 	saveTheme(theme.value);
 	syncTheme();
 });

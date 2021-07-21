@@ -1,26 +1,44 @@
 <template>
-	<div class="root">
-		<Main class="main" />
-		<div class="backdrop" :class="{ active: sidebarOpened }" @click="sidebarOpened = false"/>
-		<Sidebar class="sidebar" :class="{ active: sidebarOpened }">
-			<template #extop>
-				<button class="close" @click="sidebarOpened = false">
-					<i-ic-close/>
-				</button>
-			</template>
-		</Sidebar>
+	<div class="background"></div>
+	<header>
+		<div class="navbar hstack shadow-4 acrylic" :class="{'px-1': isMobile}" style="background: var(--panel);">
+			<button class="btn flat" @click="menuOpened = !menuOpened" v-if="isMobile">
+				<i class="bi bi-list" style="font-size: 2rem"></i>
+			</button>
+			<h1 class="navbar-title" :style="isMobile && 'font-size: 1.5rem'">
+				<RouterLink to="/" v-if="path !== '/'">XelticaMC</RouterLink>
+				<template v-else>XelticaMC</template>
+			</h1>
+		</div>
+	</header>
+	<div class="x-root container">
+		<div class="hstack fill dense">
+			<Sidebar class="fw mr-2" :drawerMode="isMobile" :open="menuOpened" @onClose="menuOpened = false" />
+			<div class="div">
+				<div class="card shadow-4">
+					<div class="body">
+						<RouterView />
+					</div>
+				</div>
+				<footer class="x-footer text-center">
+					<p>(C)2021 XelticaMC Team</p>
+					<p>
+						MinecraftはMicrosoft Corporationの登録商標です。<br/>
+						本サーバーはMicrosoftおよびMojang Studiosとは関係無く、非公式に運営しています。<br/>
+						公式へのお問い合わせはご遠慮ください。<br/>
+					</p>
+				</footer>
+			</div>
+		</div>
 	</div>
-	<button class="sidebar-button" @click="sidebarOpened = true">
-		<i-ic-menu />
-	</button>
 </template>
 
 <script lang="ts">
 import { useHead } from '@vueuse/head';
-import { defineComponent, ref, watch } from 'vue';
+import { computed, defineComponent, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Main from './Main.vue';
-import Sidebar from './Sidebar.vue';
+import Sidebar from './components/Sidebar.vue';
 
 export default defineComponent({
 	name: 'App',
@@ -29,8 +47,20 @@ export default defineComponent({
 		Sidebar,
 	},
 	setup() {
+		const mobile = 800;
+
 		const sidebarOpened = ref(false);
+		const isMobile = ref(document.body.clientWidth <= 800);
+		const menuOpened = ref(false);
 		const route = useRoute();
+		const path = computed(() => route.path);
+		const ro = new ResizeObserver((r) => {
+			const { width } = r[0].contentRect;
+			isMobile.value = width <= mobile;
+			console.log(width);
+		})
+		ro.observe(document.body);
+
     useHead({
       title: 'XelticaMC',
     });
@@ -39,105 +69,37 @@ export default defineComponent({
 		}, { deep: true });
 		return {
 			sidebarOpened,
+			path,
+			isMobile,
+			menuOpened,
 		}
 	},
 });
 </script>
 
-<style lang="scss" scoped>
-.root {
-	display: flex;
-	min-height: 100vh;
-	justify-content: center;
-	position: relative;
-	transition: opacity 0.5s ease;
-	opacity: 1;
-
-	> .main {
-		max-width: 800px;
-		width: 100%;
-	}
-
-	> .sidebar {
-		> .close {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 1024px) {
-		> .sidebar {
-			position: fixed;
-			top: 0;
-			bottom: 0;
-			height: auto;
-			background: var(--bg);
-			overflow: auto;
-			box-shadow: none;
-			right: -320px;
-			margin: 0;
-			transition: all 0.2s ease;
-			z-index: 2;
-
-			> .close {
-				display: block;
-				margin-left: auto;
-				font-size: 24px;
-				border: none;
-				background: none;
-				color: var(--accent);
-				outline: none;
-			}
-
-			&.active {
-				right: 0;
-				box-shadow: 0 0 32px black;
-			}
-		}
-
-		> .backdrop {
-			pointer-events: none;
-			position: fixed;
-			inset: 0;
-			z-index: 1;
-			transition: all 0.2s ease;
-			background: transparent;
-
-			&.active {
-				pointer-events: auto;
-				background: rgba(0, 0, 0, 0.5);
-			}
-		}
-	}
-}
-
-.sidebar-button {
-	position: fixed;
-	right: -1px;
-	top: 64px;
-	width: 64px;
-	height: 64px;
-	background: var(--bg);
-	border-radius: 16px 0 0 16px;
-	outline: none;
-	border: none;
-	color: var(--accent);
-	box-shadow: 0 0 16px #00000030;
-	font-size: 24px;
-
-	&:hover {
-		filter: brightness(120%);
-	}
-
-	&:active {
-		filter: brightness(60%);
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.sidebar-button {
-		display: none;
-	}
+<style lang="scss">
+body {
+	--primary: var(--green) !important;
+	--primary-d: var(--green-d) !important;
+	--primary-l: var(--green-l) !important;
+	font-feature-settings: "pkna";
 }
 </style>
 
-<style src="./style.scss"></style>
+<style lang="scss" scoped>
+header > .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+}
+.x-root {
+	margin-top: 64px;
+}
+
+.x-footer {
+	color: var(--dimmed);
+	padding: 64px 0;
+}
+</style>

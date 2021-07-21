@@ -1,36 +1,54 @@
 <template>
 	<article class="_vstack">
-		<section class="hero">
-			<h1>XelticaMC</h1>
-			<p>始めよう、本当のBetter Togetherを。</p>
+		<section>
+			<img :src="imagePath" class="fluid" style="border-radius: var(--radius)" />
+			<h1 class="mt-3 text-center">
+				集え、全てのマインクラフター。
+			</h1>
 			<div class="caution" v-if="caution">
 				<RouterLink :to="caution.link">{{ caution.name }}</RouterLink>
 			</div>
-			<Carousel wrapAround class="carousel">
-				<Slide v-for="slide in slides" :key="slide">
-					<img :src="slide" :alt="slide" class="slide" />
-				</Slide>
-
-				<template #addons>
-					<Pagination />
-				</template>
-			</Carousel>
 			<p>XelticaMC は、<strong>気楽にマルチプレイができる</strong>マイクラの生活サーバーです。</p>
 			<p>
 				家を立てて生活したり、建築スキルで競ったり、闘技場を作って戦ったり、
 				遠出して珍しいアイテムを探したり、はたまた本サーバーの機能で遊んだり、...。
 			</p>
-			<p>何でもできるマイクラだからこそ、遊び方はあなた次第です！</p>
+			<p>どんな遊び方もできるマイクラだからこそ、そのどんな遊び方も受け入れるサーバーを目指しています。</p>
 		</section>
 		<section>
-			<h2>本当のクロスプレイ</h2>
-			<p>本来一緒に遊ぶことのできない<strong>Java版</strong>と<strong>統合版</strong>によるクロスプレイを実現。</p>
-			<p>
-				今まで持っているマイクラのエディションが違うために遊べなかった友達とも、<br/>XelticaMCでなら遊べます！
-				<RouterLink to="how-it-works">仕組み</RouterLink>
-			</p>
-
-			<table>
+			<div class="row">
+				<div class="col-12 tab-4">
+					<div class="vstack feature text-center">
+						<div class="circle bg-pink text-white">
+							<i class="bi-heart"></i>
+						</div>
+						<h1>安心、安全。</h1>
+						<p>建築エリアは敵, 爆破, ロスト無し。<br>安心して建築できます。</p>
+					</div>
+				</div>
+				<div class="col-12 tab-4">
+					<div class="vstack feature text-center">
+						<div class="circle bg-green text-white">
+							<i class="bi-person"></i>
+						</div>
+						<h1>充実サポート。</h1>
+						<p>専用Discordサーバーで質問すれば、<br />鯖民やスタッフが答えます。Wikiも充実しており、情報を探すのにうってつけです。</p>
+					</div>
+				</div>
+				<div class="col-12 tab-4">
+					<div class="vstack fill feature text-center">
+						<div class="circle bg-blue text-white">
+							<i class="bi-lightning-charge"></i>
+						</div>
+						<h1>やりこみ要素</h1>
+						<p>様々なやりこみ要素を用意しています。また、定期的にイベントを開催する予定です。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>対応バージョン</h2>
+			<table class="table">
 				<tbody>
 					<tr>
 						<td>Java版</td>
@@ -42,14 +60,12 @@
 					</tr>
 				</tbody>
 			</table>
-			<p class="_caption">
-				<RouterLink to="/mcversion">
-					「Java版」「統合版」の意味がわからない方へ
-				</RouterLink>
+			<p class="text-dimmed" style="font-size: 0.8rem">
+				※統合版への対応は不安定であり、思わぬ不具合がある可能性があります。ご留意ください。
 			</p>
 		</section>
 		<section>
-			<h2>ロールと参加可能時間</h2>
+			<h2>ロール</h2>
 			<p>
 				本サーバーでは荒らし対策のため、<b class="_wakaba">わかば</b>、<b class="_citizen">市民</b>という2つのプレイヤーロールがあります。
 				初参加プレイヤーは全てわかばです。<b class="_wakaba">わかば</b>にはいくつかの機能制限がありますが、
@@ -61,28 +77,34 @@
 			<h2>参加する！</h2>
 			<p>もし興味がありましたら、<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上でぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
 
-			<button class="btn" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
+			<button class="btn primary mb-2" v-if="!showAddrs" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
 				利用規約を読んだ
 			</button>
-			<div class="addrs" :class="{show: showAddrs}">
-				<dl>
-					<dt>アドレス</dt>
-					<dd>
-						play.craft.xeltica.work
-						<button class="copy-button" @click="copy('play.craft.xeltica.work')">コピー</button>
-					</dd>
-					<dt>ポート(Java版)</dt>
-					<dd>
-						25565
-						<button class="copy-button" @click="copy('25565')">コピー</button>
-					</dd>
-					<dt>ポート(統合版)</dt>
-					<dd>
-						19132
-						<button class="copy-button" @click="copy('19132')">コピー</button>
-					</dd>
-				</dl>
-			</div>
+			<table class="table addrs" v-else>
+				<tbody>
+					<tr>
+						<td>アドレス</td>
+						<td>
+							play.craft.xeltica.work
+							<button class="copy-button" @click="copy('play.craft.xeltica.work')">コピー</button>
+						</td>
+					</tr>
+					<tr>
+						<td>ポート(Java版)</td>
+						<td>
+							25565
+							<button class="copy-button" @click="copy('25565')">コピー</button>
+						</td>
+					</tr>
+					<tr>
+						<td>ポート(統合版)</td>
+						<td>
+							19132
+							<button class="copy-button" @click="copy('19132')">コピー</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
 			<p>細かい遊び方は、<RouterLink to="/docs/walkthrough">あるきかた</RouterLink>をご確認ください！</p>
 
@@ -99,7 +121,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import Address from '../components/Address.vue';
@@ -107,9 +129,11 @@ import Discord from '../components/Discord.vue';
 import MinecraftStats from '../components/MinecraftStats.vue';
 import Links from '../components/Links.vue';
 
-import title from '../assets/title.jpg';
+import day from '../assets/day.jpg';
+import night from '../assets/night.jpg';
 
 import 'vue3-carousel/dist/carousel.css';
+import { osTheme, theme } from '../theme';
 
 type Caution = {
 	title: string;
@@ -133,8 +157,12 @@ export default defineComponent({
 	},
 
 	setup() {
+		const imagePath = computed(() => {
+			const t = theme.value === 'auto' ? osTheme.value : theme.value;
+			return t === 'day' ? day : night;
+		});
 		return {
-			title,
+			imagePath,
 			caution,
 			showAddrs: ref(false),
 			slides: [
@@ -159,17 +187,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-section {
-	h1 {
-		font-size: 2rem;
-	}
-}
-
-section + section {
-	padding-top: 16px;
-	border-top: 1px solid var(--divider);
-}
-
 .slide {
 	pointer-events: none;
 }
@@ -179,69 +196,32 @@ section + section {
 	margin: 32px auto;
 }
 
-.addrs {
-	display: block;
-	margin-top: 8px;
-	height: 0;
-	box-sizing: border-box;
-	overflow: hidden;
-	&.show {
-		height: auto;
+.feature {
+	align-items: center;
+	padding: 3rem 0;
+	> .circle {
+		width: 96px;
+		height: 96px;
+		font-size: 48px;
+		line-height: 1;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 8px;
 	}
-	> dl {
-		> dt {
-			width: 140px;
-		}
-		> dd {
-			display: flex;
-			align-items: center;
-		}
-		@media (max-width: 415px) {
-			> dt, > dd {
-				width: auto;
-				float: none;
-				display: block;
-			}
-			> dd {
-				margin-left: 0;
-			}
-		}
-	}
-}
-
-.btn {
-	padding: 8px 16px;
-	color: white;
-	background: var(--accent);
-	border: 0;
-	display: inline-block;
-	border-radius: 8px;
-	cursor: pointer;
-	&:hover {
-		filter: brightness(1.05);
-	}
-	&:active,
-	&.active {
-		filter: brightness(0.9);
-	}
-	&::before {
-		content: '▼';
-		margin-right: 8px;
-		display: inline-block;
-		transform-origin: center;
-		transition: transform 0.2s;
-	}
-	&.active::before {
-		content: '▼';
-		transform: rotate(-180deg);
+	> h1 {
+		font-size: 1rem;
+		font-weight: bold;
+		margin: 0;
 	}
 }
 
 .copy-button {
 	border-radius: 6px;
-	background: var(--bg);
-	border: 1px solid var(--accent);
-	color: var(--accent);
+	background: var(--tone-0);
+	border: 1px solid var(--primary);
+	color: var(--primary);
 	padding: 2px;
 	font-size: 9px;
 	font-weight: bold;

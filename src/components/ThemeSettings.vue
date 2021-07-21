@@ -1,22 +1,21 @@
 <template>
-	<h2>テーマ</h2>
-	<ul style="list-style: none; margin: 0; padding: 0">
-		<li>
-			<label>
-				<input type="radio" value="auto" v-model="theme"> 自動
+	<div class="menu">
+		<section>
+			<h1>テーマ</h1>
+			<label class="item input-check">
+				<input type="radio" value="auto" v-model="theme">
+				<span>自動</span>
 			</label>
-		</li>
-		<li>
-			<label>
-				<input type="radio" value="day" v-model="theme"> ライト
+			<label class="item input-check">
+				<input type="radio" value="day" v-model="theme">
+				<span>ライト</span>
 			</label>
-		</li>
-		<li>
-			<label>
-				<input type="radio" value="night" v-model="theme"> ダーク
+			<label class="item input-check">
+				<input type="radio" value="night" v-model="theme">
+				<span>ダーク</span>
 			</label>
-		</li>
-	</ul>
+		</section>
+	</div>
 </template>
 
 <script lang="ts">

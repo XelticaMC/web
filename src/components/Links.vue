@@ -1,18 +1,54 @@
 <template>
-	<ul>
-		<li><RouterLink to="/rule">利用規約</RouterLink></li>
-		<li><a href="https://map.craft.xeltica.work" target="_blank" rel="noopener noreferrer">ウェブマップ</a></li>
-		<!-- <li><RouterLink to="">ギャラリー</RouterLink></li> -->
-		<li><RouterLink to="/plugins">導入プラグイン</RouterLink></li>
-		<li><a href="https://wiki.craft.xeltica.work">Wiki</a></li>
-	</ul>
-	<section>
-		<h2>その他</h2>
-		<ul>
-				<li><a href="https://twitter.com/XelticaMC">XelticaMC 公式Twitter</a></li>
-				<li><a href="https://twitter.com/@adxlw">XelticaのTwitter</a></li>
-		</ul>
-	</section>
+	<div class="menu">
+		<section>
+			<RouterLink class="item" to="/rule" active-class="active">
+				<span class="icon">
+					<i class="bi bi-exclamation-diamond"></i>
+				</span>
+				利用規約
+			</RouterLink>
+			<a class="item" href="https://map.craft.xeltica.work" target="_blank" rel="noopener noreferrer">
+				<span class="icon">
+					<i class="bi bi-geo-alt"></i>
+				</span>
+				ウェブマップ
+				<span class="icon ml-1">
+					<i class="bi bi-box-arrow-up-right"></i>
+				</span>
+			</a>
+			<!-- <li><RouterLink to="">ギャラリー</RouterLink></li> -->
+			<RouterLink class="item" to="/plugins" active-class="active">
+				<span class="icon">
+					<i class="bi bi-plug"></i>
+				</span>
+				導入プラグイン
+			</RouterLink>
+			<a class="item" href="https://wiki.craft.xeltica.work" active-class="active">
+				<span class="icon">
+					<i class="bi bi-journal-text"></i>
+				</span>
+				Wiki
+				<span class="icon ml-1">
+					<i class="bi bi-box-arrow-up-right"></i>
+				</span>
+			</a>
+		</section>
+		<section>
+			<h1>その他</h1>
+				<a class="item" href="https://twitter.com/XelticaMC">
+					<span class="icon">
+						<i class="bi bi-twitter"></i>
+					</span>
+					XelticaMC 公式Twitter
+				</a>
+				<a class="item" href="https://twitter.com/@adxlw">
+					<span class="icon">
+						<i class="bi bi-twitter"></i>
+					</span>
+					XelticaのTwitter
+				</a>
+		</section>
+	</div>
 </template>
 
 <script lang="ts">
