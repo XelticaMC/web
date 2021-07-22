@@ -15,7 +15,7 @@
 		<div class="hstack fill dense">
 			<Sidebar class="fw mr-2" :drawerMode="isMobile" :open="menuOpened" @onClose="menuOpened = false" />
 			<div class="div">
-				<div class="card shadow-4">
+				<div class="card ghost">
 					<div class="body">
 						<RouterView />
 					</div>
@@ -54,6 +54,9 @@ export default defineComponent({
 		const menuOpened = ref(false);
 		const route = useRoute();
 		const path = computed(() => route.path);
+		watch(route, () => {
+			menuOpened.value = false;
+		});
 		const ro = new ResizeObserver((r) => {
 			const { width } = r[0].contentRect;
 			isMobile.value = width <= mobile;
