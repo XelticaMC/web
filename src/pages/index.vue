@@ -1,7 +1,7 @@
 <template>
-	<article class="_vstack">
+	<article class="_vstack ic0acan3">
 		<section>
-			<img :src="imagePath" class="fluid" style="border-radius: var(--radius)" />
+			<img :src="imagePath" class="fluid shadow-4" style="border-radius: var(--radius)" />
 			<h1 class="mt-3 text-center">
 				集え、全てのマインクラフター。
 			</h1>
@@ -198,7 +198,6 @@ export default defineComponent({
 
 .feature {
 	align-items: center;
-	padding: 3rem 0;
 	> .circle {
 		width: 96px;
 		height: 96px;
@@ -229,6 +228,12 @@ export default defineComponent({
 	cursor: pointer;
 	&:active {
 		filter: brightness(0.8);
+	}
+}
+
+.ic0acan3 {
+	> section {
+		margin-bottom: 2rem;
 	}
 }
 </style>

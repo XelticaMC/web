@@ -12,7 +12,7 @@
 		</div>
 	</header>
 	<div class="x-root container">
-		<div class="hstack fill dense">
+		<div class="x-main hstack fill dense">
 			<Sidebar class="fw mr-2" :drawerMode="isMobile" :open="menuOpened" @onClose="menuOpened = false" />
 			<div class="div">
 				<div class="card ghost">
@@ -104,5 +104,14 @@ header > .navbar {
 .x-footer {
 	color: var(--dimmed);
 	padding: 64px 0;
+}
+
+.x-main {
+	width: max-content;
+	margin: 0 auto;
+}
+
+.body {
+	max-width: 960px;
 }
 </style>
