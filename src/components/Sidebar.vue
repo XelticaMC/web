@@ -51,7 +51,7 @@ export default defineComponent({
 .sidebar {
 	position: sticky;
 	top: 96px;
-	max-width: 320px;
+	max-width: 200px;
 	width: 100%;
 	height: max-content;
 	box-sizing: border-box;

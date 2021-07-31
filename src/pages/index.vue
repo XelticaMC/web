@@ -198,6 +198,7 @@ export default defineComponent({
 
 .feature {
 	align-items: center;
+	padding: 0 1rem;
 	> .circle {
 		width: 96px;
 		height: 96px;
