@@ -107,7 +107,7 @@ header > .navbar {
 }
 
 .x-main {
-	width: max-content;
+	width: fit-content;
 	margin: 0 auto;
 }
 
