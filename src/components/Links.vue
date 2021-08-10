@@ -34,6 +34,12 @@
 				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
 			</a>
 		</section>
+		<section>
+			<h1>スペシャル</h1>
+			<RouterLink class="item" to="/special/swimming-event21" active-class="active">
+				水泳大会ランキング
+			</RouterLink>
+		</section>
 	</div>
 </template>
 
