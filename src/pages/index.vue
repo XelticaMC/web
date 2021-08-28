@@ -1,5 +1,24 @@
 <template>
-	<article class="_vstack ic0acan3">
+	<article class="ic0acan3">
+		<h1>
+			<a href="https://blog.craft.xeltica.work" target="_blank" rel="noreferrer noopener">ニュース</a>
+		</h1>
+		<p class="dimmed" v-if="posts == null || posts.length === 0">取得中…</p>
+		<div class="menu mb-4">
+			<section>
+				<a
+					class="item"
+					:href="post.link"
+					target="_blank"
+					rel="noreferrer noopener"
+					v-for="post in posts"
+					:key="post.id"
+				>
+					<span class="icon"><i class="bi bi-chevron-right"/></span>
+					{{post.title}}
+				</a>
+			</section>
+		</div>
 		<section>
 			<img :src="imagePath" class="fluid shadow-4" style="border-radius: var(--radius)" />
 			<h1 class="mt-3 text-center">
@@ -131,9 +150,10 @@ import Links from '../components/Links.vue';
 
 import day from '../assets/day.jpg';
 import night from '../assets/night.jpg';
+import { osTheme, theme } from '../scripts/theme';
+import { posts, fetchPosts, isFetching, hasError } from '../scripts/blog';
 
 import 'vue3-carousel/dist/carousel.css';
-import { osTheme, theme } from '../scripts/theme';
 
 type Caution = {
 	title: string;
@@ -161,6 +181,9 @@ export default defineComponent({
 			const t = theme.value === 'auto' ? osTheme.value : theme.value;
 			return t === 'day' ? day : night;
 		});
+
+		fetchPosts();
+
 		return {
 			imagePath,
 			caution,
@@ -180,7 +203,10 @@ export default defineComponent({
 				} else {
 					alert('お使いの端末では、残念ながら利用できません。\n手動コピーをお願いします！');
 				}
-			}
+			},
+			posts,
+			isFetching,
+			hasError,
 		};
 	},
 });

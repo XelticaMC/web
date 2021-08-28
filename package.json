@@ -13,6 +13,7 @@
 		"@vueuse/head": "^0.2.3",
 		"markdown-it": "^12.0.4",
 		"normalize.css": "^8.0.1",
+		"striptags": "^3.2.0",
 		"vue": "^3.0.5",
 		"vue-router": "^4",
 		"vue3-carousel": "^0.1.11",
