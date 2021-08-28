@@ -20,7 +20,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, onUnmounted, reactive, ref } from 'vue';
 
-import { players, hasError, isFetching, fetchPlayers } from '../player';
+import { players, hasError, isFetching, fetchPlayers } from '../scripts/player';
 
 type ServerStatus = Record<string, unknown> | null;
 

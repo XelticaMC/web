@@ -13,7 +13,7 @@ import { useHead } from '@vueuse/head';
 import { computed, defineComponent, onMounted, ref, watch, watchEffect } from 'vue';
 
 import NotFound from '../components/NotFound.vue';
-import { Document, getDocument } from '../utils/getDocument';
+import { Document, getDocument } from '../scripts/getDocument';
 
 let cache: Document;
 

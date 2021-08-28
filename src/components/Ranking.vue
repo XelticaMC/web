@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { Ranking } from "../ranking";
+import { Ranking } from "../scripts/ranking";
 
 export default defineComponent({
 	name: "Ranking",

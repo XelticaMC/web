@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Theme, theme } from '../theme';
+import { Theme, theme } from '../scripts/theme';
 export default defineComponent({
 	name: 'ThemeSettings',
 	computed: {

@@ -133,7 +133,7 @@ import day from '../assets/day.jpg';
 import night from '../assets/night.jpg';
 
 import 'vue3-carousel/dist/carousel.css';
-import { osTheme, theme } from '../theme';
+import { osTheme, theme } from '../scripts/theme';
 
 type Caution = {
 	title: string;

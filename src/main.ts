@@ -6,7 +6,7 @@ import routes from 'voie-pages';
 
 import App from './App.vue';
 import NotFound from './components/NotFound.vue';
-import * as Themes from './theme';
+import * as Themes from './scripts/theme';
 import { createHead } from '@vueuse/head';
 
 import 'xeltica-ui/dist/css/xeltica-ui.min.css';

@@ -26,7 +26,7 @@
 import { useHead } from '@vueuse/head';
 import { defineComponent } from 'vue';
 
-import { plugins, isFetching, fetchPlugins, hasError } from '../plugins';
+import { plugins, isFetching, fetchPlugins, hasError } from '../scripts/plugins';
 
 export default defineComponent({
 	name: 'Plugins',

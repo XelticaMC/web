@@ -20,7 +20,7 @@ import { useHead } from '@vueuse/head';
 import {  defineComponent } from 'vue';
 
 import Ranking from '../../components/Ranking.vue';
-import { ranking, isFetching, hasError } from '../../ranking';
+import { ranking, isFetching, hasError } from '../../scripts/ranking';
 
 export default defineComponent({
 	name: 'SwimmingEvent21',

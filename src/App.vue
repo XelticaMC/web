@@ -37,13 +37,11 @@
 import { useHead } from '@vueuse/head';
 import { computed, defineComponent, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
-import Main from './Main.vue';
 import Sidebar from './components/Sidebar.vue';
 
 export default defineComponent({
 	name: 'App',
 	components: {
-		Main,
 		Sidebar,
 	},
 	setup() {
