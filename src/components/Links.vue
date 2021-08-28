@@ -19,9 +19,15 @@
 				Wiki
 				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
 			</a>
+			<a class="item" href="https://blog.craft.xeltica.work" active-class="active">
+				<span class="icon"><i class="bi bi-newspaper"/></span>
+				スタッフブログ
+				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
+			</a>
 			<div class="item disabled">
 				<span class="icon"><i class="bi bi-camera"/></span>
 				ゼルスタグラム
+				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
 			</div>
 		</section>
 		<section>

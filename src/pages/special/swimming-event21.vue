@@ -1,21 +1,11 @@
 <template>
 	<article>
 		<h1>水泳イベント'21 ランキング</h1>
-		<p>8月9日から大好評開催中の水泳イベント'21のランキングを確認できます。常に最新情報が反映されます。</p>
-		<div v-if="isFetching" class="alert">取得中</div>
-		<div v-else-if="hasError" class="alert bg-danger">
-			<i class="icon bi bi-x-circle"></i>
-			エラー
-		</div>
-		<div class="vstack" v-else>
-			<Ranking :data="ranking['swimming_pc']"  />
-			<Ranking :data="ranking['swimming_phone']"  />
-		</div>
+		<p>イベント最終日のため、ランキングを非公開としています。</p>
 	</article>
 </template>
 
 <script lang="ts">
-//
 import { useHead } from '@vueuse/head';
 import {  defineComponent } from 'vue';
 
