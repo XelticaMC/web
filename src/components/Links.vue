@@ -33,12 +33,7 @@
 		<section>
 			<a class="item" href="https://twitter.com/XelticaMC">
 				<span class="icon"><i class="bi bi-twitter"/></span>
-				@XelticaMC
-				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
-			</a>
-			<a class="item" href="https://twitter.com/@adxlw">
-				<span class="icon"><i class="bi bi-twitter"/></span>
-				@Xeltica
+				公式ツイッター
 				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
 			</a>
 			<a class="item" href="https://www.youtube.com/channel/UCpSZRpL1o31P6CqAcGcuiMQ">
