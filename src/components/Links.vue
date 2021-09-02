@@ -41,6 +41,16 @@
 				@Xeltica
 				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
 			</a>
+			<a class="item" href="https://www.youtube.com/channel/UCpSZRpL1o31P6CqAcGcuiMQ">
+				<span class="icon"><i class="bi bi-youtube"/></span>
+				YouTube
+				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
+			</a>
+			<a class="item" href="https://soundcloud.com/xelticamc">
+				<span class="icon"><i class="bi bi-music-note-beamed"/></span>
+				SoundCloud
+				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
+			</a>
 		</section>
 	</div>
 </template>
