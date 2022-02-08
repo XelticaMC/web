@@ -57,7 +57,7 @@
 				<div class="col-4 col-12-sm">
 					<div class="vstack fill feature text-center">
 						<div class="circle bg-blue text-white">
-							<i class="bi-lightning-charge"></i>
+							<i class="bi-lightning-charge-fill"></i>
 						</div>
 						<h1>やりこみ要素</h1>
 						<p>様々なやりこみ要素を用意しています。また、定期的にイベントを開催する予定です。</p>
@@ -66,25 +66,26 @@
 			</div>
 		</section>
 		<section>
-			<h2><i class="bi-arrow-repeat"></i> 対応バージョン</h2>
+			<h2 class="underline"><i class="bi-arrow-repeat"></i> 対応バージョン</h2>
 			<table class="table">
 				<tbody>
 					<tr>
 						<td>Java版</td>
-						<td>1.17.1</td>
+						<td>1.17.1-1.18.1</td>
 					</tr>
 					<tr>
 						<td>統合版</td>
-						<td>1.17.0-1.17.40</td>
+						<td>1.17.30-1.17.41, 1.18.0-1.18.2</td>
 					</tr>
 				</tbody>
 			</table>
-			<p class="text-dimmed" style="font-size: 0.8rem">
+			<div class="alert bg-warn">
+				<i class="icon bi-exclamation-triangle-fill"></i>
 				※統合版への対応は不安定であり、思わぬ不具合がある可能性があります。ご留意ください。
-			</p>
+			</div>
 		</section>
 		<section>
-			<h2><i class="bi-person-fill"></i> ロール</h2>
+			<h2 class="underline"><i class="bi-person-fill"></i> ロール</h2>
 			<p>
 				本サーバーでは荒らし対策のため、<b class="_wakaba">わかば</b>、<b class="_citizen">市民</b>という2つのプレイヤーロールがあります。
 				初参加プレイヤーは全てわかばです。<b class="_wakaba">わかば</b>にはいくつかの機能制限がありますが、
@@ -93,7 +94,7 @@
 			<p>市民に昇格する方法については、<a href="/docs/citizen">昇格システム</a>をお読みください！</p>
 		</section>
 		<section>
-			<h2><i class="bi-door-open-fill"></i> 参加する！</h2>
+			<h2 class="underline"><i class="bi-door-open-fill"></i> 参加する！</h2>
 			<p>もし興味がありましたら、<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上でぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
 
 			<button class="btn primary mb-2" v-if="!showAddrs" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
@@ -130,6 +131,7 @@
 				  iOS, Android, Windows 10バージョンをご利用の方は、下のボタンからMinecraftを起動すると、XelticaMCがサーバーリストに追加されます！
 				  <br/>
 					<a href="minecraft://?addExternalServer=XelticaMC|play.craft.xeltica.work:19132" class="btn primary">
+						<i class="bi-arrow-right"></i>
 						サーバーリストに追加する
 					</a>
 				</p>
@@ -139,13 +141,17 @@
 
 		</section>
 		<section>
-			<h2><i class="bi-share-fill"></i> シェア</h2>
+			<h2 class="underline"><i class="bi-share-fill"></i> シェア</h2>
 			<p>
 				サーバーで起きた出来事を自由にシェアしてください。
 				<strong style="color: var(--accent)">#XelticaMC</strong> ハッシュタグの使用をおすすめしています。
 			</p>
 		</section>
-		<Discord />
+		<section>
+			<h2 class="underline"><i class="bi-discord"></i> Discord</h2>
+			<p>Discord サーバーを用意しています。参加していなくても遊べますが、重要なお知らせや情報交換ができるので、何倍も楽しめます！是非入ってください！もちろん、登録は無料です！</p>
+			<a class="btn primary discord" href="https://discord.gg/vJWJQtzVcB">参加する！</a>
+		</section>
 	</article>
 </template>
 
@@ -154,7 +160,6 @@ import { computed, defineComponent, ref } from 'vue';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import Address from '../components/Address.vue';
-import Discord from '../components/Discord.vue';
 import MinecraftStats from '../components/MinecraftStats.vue';
 import Links from '../components/Links.vue';
 
@@ -181,7 +186,6 @@ export default defineComponent({
 		Navigation,
 
 		Address,
-		Discord,
 		MinecraftStats,
 		Links,
 	},
