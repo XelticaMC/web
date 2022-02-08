@@ -1,10 +1,14 @@
 <template>
 	<NotFound v-if="isError" />
 	<template v-else-if="doc">
-		<header>
-			<h1 v-text="doc.title" />
-		</header>
-		<article v-html="doc.body" />
+		<article class="card">
+			<div class="body">
+				<header>
+					<h1 v-text="doc.title" />
+				</header>
+				<article v-html="doc.body" />
+			</div>
+		</article>
 	</template>
 </template>
 
@@ -56,7 +60,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 	div {
-		text-align: center;
+		text-align: left;
 
 		img {
 			max-width: 100%;

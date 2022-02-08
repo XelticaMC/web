@@ -36,25 +36,25 @@
 		</section>
 		<section>
 			<div class="row">
-				<div class="col-12 tab-4">
+				<div class="col-4 col-12-sm">
 					<div class="vstack feature text-center">
 						<div class="circle bg-pink text-white">
-							<i class="bi-heart"></i>
+							<i class="bi-heart-fill"></i>
 						</div>
 						<h1>安心、安全。</h1>
 						<p>建築エリアは敵, 爆破, ロスト無し。<br>安心して建築できます。</p>
 					</div>
 				</div>
-				<div class="col-12 tab-4">
+				<div class="col-4 col-12-sm">
 					<div class="vstack feature text-center">
 						<div class="circle bg-green text-white">
-							<i class="bi-person"></i>
+							<i class="bi-question-circle-fill"></i>
 						</div>
 						<h1>充実サポート。</h1>
 						<p>専用Discordサーバーで質問すれば、<br />鯖民やスタッフが答えます。Wikiも充実しており、情報を探すのにうってつけです。</p>
 					</div>
 				</div>
-				<div class="col-12 tab-4">
+				<div class="col-4 col-12-sm">
 					<div class="vstack fill feature text-center">
 						<div class="circle bg-blue text-white">
 							<i class="bi-lightning-charge"></i>
@@ -66,7 +66,7 @@
 			</div>
 		</section>
 		<section>
-			<h2>対応バージョン</h2>
+			<h2><i class="bi-arrow-repeat"></i> 対応バージョン</h2>
 			<table class="table">
 				<tbody>
 					<tr>
@@ -84,7 +84,7 @@
 			</p>
 		</section>
 		<section>
-			<h2>ロール</h2>
+			<h2><i class="bi-person-fill"></i> ロール</h2>
 			<p>
 				本サーバーでは荒らし対策のため、<b class="_wakaba">わかば</b>、<b class="_citizen">市民</b>という2つのプレイヤーロールがあります。
 				初参加プレイヤーは全てわかばです。<b class="_wakaba">わかば</b>にはいくつかの機能制限がありますが、
@@ -93,11 +93,11 @@
 			<p>市民に昇格する方法については、<a href="/docs/citizen">昇格システム</a>をお読みください！</p>
 		</section>
 		<section>
-			<h2>参加する！</h2>
+			<h2><i class="bi-door-open-fill"></i> 参加する！</h2>
 			<p>もし興味がありましたら、<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上でぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
 
 			<button class="btn primary mb-2" v-if="!showAddrs" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
-				利用規約を読んだ
+				<i class="bi-check2"></i> 利用規約を読んだ
 			</button>
 			<table class="table addrs" v-else>
 				<tbody>
@@ -129,7 +129,7 @@
 
 		</section>
 		<section>
-			<h2>シェア</h2>
+			<h2><i class="bi-share-fill"></i> シェア</h2>
 			<p>
 				サーバーで起きた出来事を自由にシェアしてください。
 				<strong style="color: var(--accent)">#XelticaMC</strong> ハッシュタグの使用をおすすめしています。
