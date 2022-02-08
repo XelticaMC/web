@@ -124,6 +124,12 @@
 					</tr>
 				</tbody>
 			</table>
+			
+			<p>iOS, Android, Windows 10バージョンをご利用の方は、下のボタンからMinecraftを起動すると、XelticaMCがサーバーリストに追加されます！</p>
+			
+			<a href="minecraft://?addExternalServer=XelticaMC|play.craft.xeltica.work:19132" class="btn primary" style="display: block">
+        サーバーリストに追加する
+      </a>
 
 			<p>細かい遊び方は、<RouterLink to="/docs/walkthrough">あるきかた</RouterLink>をご確認ください！</p>
 
