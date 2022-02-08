@@ -75,7 +75,7 @@
 					</tr>
 					<tr>
 						<td>統合版</td>
-						<td>1.17.0-1.17.10</td>
+						<td>1.17.0-1.17.40</td>
 					</tr>
 				</tbody>
 			</table>
@@ -99,31 +99,41 @@
 			<button class="btn primary mb-2" v-if="!showAddrs" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
 				<i class="bi-check2"></i> 利用規約を読んだ
 			</button>
-			<table class="table addrs" v-else>
-				<tbody>
-					<tr>
-						<td>アドレス</td>
-						<td>
-							play.craft.xeltica.work
-							<button class="copy-button" @click="copy('play.craft.xeltica.work')">コピー</button>
-						</td>
-					</tr>
-					<tr>
-						<td>ポート(Java版)</td>
-						<td>
-							25565
-							<button class="copy-button" @click="copy('25565')">コピー</button>
-						</td>
-					</tr>
-					<tr>
-						<td>ポート(統合版)</td>
-						<td>
-							19132
-							<button class="copy-button" @click="copy('19132')">コピー</button>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<template  v-else>
+				<table class="table addrs">
+					<tbody>
+						<tr>
+							<td>アドレス</td>
+							<td>
+								play.craft.xeltica.work
+								<button class="copy-button" @click="copy('play.craft.xeltica.work')">コピー</button>
+							</td>
+						</tr>
+						<tr>
+							<td>ポート(Java版)</td>
+							<td>
+								25565
+								<button class="copy-button" @click="copy('25565')">コピー</button>
+							</td>
+						</tr>
+						<tr>
+							<td>ポート(統合版)</td>
+							<td>
+								19132
+								<button class="copy-button" @click="copy('19132')">コピー</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>
+				  iOS, Android, Windows 10バージョンをご利用の方は、下のボタンからMinecraftを起動すると、XelticaMCがサーバーリストに追加されます！
+				  <br/>
+					<a href="minecraft://?addExternalServer=XelticaMC|play.craft.xeltica.work:19132" class="btn primary">
+						サーバーリストに追加する
+					</a>
+				</p>
+			</template>
 
 			<p>細かい遊び方は、<RouterLink to="/docs/walkthrough">あるきかた</RouterLink>をご確認ください！</p>
 
