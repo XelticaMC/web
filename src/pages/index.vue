@@ -28,8 +28,8 @@
 		</template>
 		<section>
 			<img :src="imagePath" class="fluid shadow-4 mt-4" style="border-radius: var(--radius)" />
-			<h1 class="mt-3 text-center">
-				集え、全てのマインクラフター。
+			<h1 class="mt-3 text-center text-150" style="white-space: nowrap">
+				来たれ、<wbr/>すべての<wbr/>クラフター。
 			</h1>
 			<div class="caution" v-if="caution">
 				<RouterLink :to="caution.link">{{ caution.name }}</RouterLink>
