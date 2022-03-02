@@ -14,12 +14,8 @@
 	<div class="x-root container">
 		<div class="x-main hstack fill dense">
 			<Sidebar class="fw mr-2" :drawerMode="isMobile" :open="menuOpened" @onClose="menuOpened = false" />
-			<div class="div">
-				<div class="card ghost">
-					<div class="body">
-						<RouterView />
-					</div>
-				</div>
+			<div class="x-body">
+				<RouterView />
 				<footer class="x-footer text-center">
 					<p>(C)2021-2022 XelticaMC Team</p>
 					<p>
@@ -105,11 +101,12 @@ header > .navbar {
 }
 
 .x-main {
-	width: fit-content;
 	margin: 0 auto;
+	min-width: 0;
 }
 
-.body {
+.x-body {
 	max-width: 960px;
+	flex: 1;
 }
 </style>

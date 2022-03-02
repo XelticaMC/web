@@ -1,14 +1,10 @@
 <template>
 	<NotFound v-if="isError" />
 	<template v-else-if="doc">
-		<article class="card">
-			<div class="body">
-				<header>
-					<h1 v-text="doc.title" />
-				</header>
-				<article v-html="doc.body" />
-			</div>
-		</article>
+		<header>
+			<h1 v-text="doc.title" />
+		</header>
+		<article v-html="doc.body" />
 	</template>
 </template>
 

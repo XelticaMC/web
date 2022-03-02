@@ -1278,10 +1278,10 @@ vue-router@^4, vue-router@^4.0.0-beta.4:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.3.tgz#8b26050c88b2dec7e27a88835f71046b365823ec"
   integrity sha512-AD1OjtVPyQHTSpoRsEGfPpxRQwhAhxcacOYO3zJ3KNkYP/r09mileSp6kdMQKhZWP2cFsPR3E2M3PZguSN5/ww==
 
-vue3-carousel@^0.1.11:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/vue3-carousel/-/vue3-carousel-0.1.11.tgz#8c670d750dd8c230ec7bee2ff9661b56d4f23c1c"
-  integrity sha512-XwFYSYxOXCi7yoJAY8J9YKMCpej4vlgar3DFVCF2F/Vcp0ooPHaaMVqyWyX1PhdO9VJi2KCr5HdesLGg/8Sxww==
+vue3-carousel@^0.1.36:
+  version "0.1.36"
+  resolved "https://registry.yarnpkg.com/vue3-carousel/-/vue3-carousel-0.1.36.tgz#494f06cf08dd1632f534bfee5ee5785b33bc5ac8"
+  integrity sha512-e1wDM9wmzy+hFrBaoJXXRTmsiZ1Q71p646MgZ75qC3NlymbigYwqlKewj0cNWslC0Q9gXEieIwIbNJO71Ydesw==
 
 vue@^3.0.5:
   version "3.0.5"
@@ -1301,9 +1301,9 @@ wrap-ansi@^7.0.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
 
-xeltica-ui@xeltica/ui:
-  version "1.0.0-alpha.15"
-  resolved "https://codeload.github.com/xeltica/ui/tar.gz/d8088a79e78f0795a92a542d872b3449ad34dbcb"
+xeltica-ui@xeltica/design-system:
+  version "1.0.0-beta.7"
+  resolved "https://codeload.github.com/xeltica/design-system/tar.gz/d0b49b6487c379a10f6e568c0f9e37b0035ea7f2"
 
 y18n@^5.0.5:
   version "5.0.5"

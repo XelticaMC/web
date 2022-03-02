@@ -1,26 +1,33 @@
 <template>
 	<article class="ic0acan3">
-		<h1>
-			<a href="https://blog.craft.xeltica.work" target="_blank" rel="noreferrer noopener">ニュース</a>
-		</h1>
-		<p class="dimmed" v-if="posts == null || posts.length === 0">取得中…</p>
-		<div class="menu mb-4">
-			<section>
-				<a
-					class="item"
-					:href="post.link"
-					target="_blank"
-					rel="noreferrer noopener"
-					v-for="post in posts"
-					:key="post.id"
-				>
-					<span class="icon"><i class="bi bi-chevron-right"/></span>
-					{{post.title}}
-				</a>
-			</section>
-		</div>
+		<h2 class="text-125 mt-0">スタッフブログ</h2>
+		<p class="vstack slim" v-if="posts == null || posts.length === 0">
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+		</p>
+		<template v-else>
+			<div class="menu">
+				<section>
+					<a
+						class="item"
+						:href="post.link"
+						target="_blank"
+						rel="noreferrer noopener"
+						v-for="post in posts"
+						:key="post.id"
+					>
+						<span class="icon"><i class="bi bi-chevron-right"/></span>
+						{{post.title}}
+					</a>
+				</section>
+			</div>
+			<a href="https://blog.craft.xeltica.work" target="_blank" rel="noreferrer noopener">もっと見る</a>
+		</template>
 		<section>
-			<img :src="imagePath" class="fluid shadow-4" style="border-radius: var(--radius)" />
+			<img :src="imagePath" class="fluid shadow-4 mt-4" style="border-radius: var(--radius)" />
 			<h1 class="mt-3 text-center">
 				集え、全てのマインクラフター。
 			</h1>
