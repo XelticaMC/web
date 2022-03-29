@@ -157,7 +157,7 @@
 		<section>
 			<h2 class="underline"><i class="bi-discord"></i> Discord</h2>
 			<p>Discord サーバーを用意しています。参加していなくても遊べますが、重要なお知らせや情報交換ができるので、何倍も楽しめます！是非入ってください！もちろん、登録は無料です！</p>
-			<a class="btn primary discord" href="https://discord.gg/vJWJQtzVcB">参加する！</a>
+			<a class="btn primary discord" href="https://discord.gg/3zuQwTASye">参加する！</a>
 		</section>
 	</article>
 </template>
