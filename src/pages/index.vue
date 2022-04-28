@@ -10,7 +10,7 @@
 		</p>
 		<template v-else>
 			<div class="menu">
-				<section>
+				<section> 
 					<a
 						class="item"
 						:href="post.link"
@@ -82,7 +82,7 @@
 					</tr>
 					<tr>
 						<td>統合版</td>
-						<td>1.17.41 + 1.18.0 - 1.18.10</td>
+						<td>1.18.0 - 1.18.31</td>
 					</tr>
 				</tbody>
 			</table>
