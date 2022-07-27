@@ -17,7 +17,7 @@
 			<div class="x-body">
 				<RouterView />
 				<footer class="x-footer text-center">
-					<p>(C)2021-2022 XelticaMC Team</p>
+					<p>(C)2021-2022 XelticaMC Staff Team</p>
 					<p>
 						MinecraftはMicrosoft Corporationの登録商標です。<br/>
 						本サーバーはMicrosoftおよびMojang Studiosとは関係無く、非公式に運営しています。<br/>

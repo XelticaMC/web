@@ -8,11 +8,11 @@
 			</label>
 			<label class="item input-check">
 				<input type="radio" value="day" v-model="theme">
-				<span>ライト</span>
+				<span><i class="bi-sun"></i> ライト</span>
 			</label>
 			<label class="item input-check">
 				<input type="radio" value="night" v-model="theme">
-				<span>ダーク</span>
+				<span><i class="bi-moon"></i> ダーク</span>
 			</label>
 		</section>
 	</div>

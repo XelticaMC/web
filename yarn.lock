@@ -1302,8 +1302,8 @@ wrap-ansi@^7.0.0:
     strip-ansi "^6.0.0"
 
 xeltica-ui@xeltica/design-system:
-  version "1.0.0-beta.7"
-  resolved "https://codeload.github.com/xeltica/design-system/tar.gz/d0b49b6487c379a10f6e568c0f9e37b0035ea7f2"
+  version "1.0.0-beta.9"
+  resolved "https://codeload.github.com/xeltica/design-system/tar.gz/83b7faede9b0a42a9a3bd8d462d95484cfa67294"
 
 y18n@^5.0.5:
   version "5.0.5"

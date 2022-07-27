@@ -10,7 +10,7 @@
 		</p>
 		<template v-else>
 			<div class="menu">
-				<section> 
+				<section>
 					<a
 						class="item"
 						:href="post.link"
@@ -26,22 +26,20 @@
 			</div>
 			<a href="https://blog.craft.xeltica.work" target="_blank" rel="noreferrer noopener">もっと見る</a>
 		</template>
-		<section>
+
+		<section id="hero" class="text-center">
 			<img :src="imagePath" class="fluid shadow-4 mt-4" style="border-radius: var(--radius)" />
-			<h1 class="mt-3 text-center text-150" style="white-space: nowrap">
-				来たれ、<wbr/>すべての<wbr/>クラフター。
+			<h1 class="mt-3 text-150" style="white-space: nowrap">
+				集まれ、すべてのクラフター。
 			</h1>
 			<div class="caution" v-if="caution">
 				<RouterLink :to="caution.link">{{ caution.name }}</RouterLink>
 			</div>
-			<p>XelticaMC は、<strong>気楽にマルチプレイができる</strong>マイクラの生活サーバーです。</p>
-			<p>
-				家を立てて生活したり、建築スキルで競ったり、闘技場を作って戦ったり、
-				遠出して珍しいアイテムを探したり、はたまた本サーバーの機能で遊んだり、...。
-			</p>
-			<p>どんな遊び方もできるマイクラだからこそ、そのどんな遊び方も受け入れるサーバーを目指しています。</p>
+			<p>家を建てて、生活する。ご近所さんと仲良くする。未知の世界で冒険する。</p>
+			<p>毎日が退屈でつまらない？あなたも<strong>XelticaMC</strong>で生活してみませんか？</p>
 		</section>
-		<section>
+
+		<section class="features">
 			<div class="row">
 				<div class="col-4 col-12-sm">
 					<div class="vstack feature text-center">
@@ -49,7 +47,7 @@
 							<i class="bi-heart-fill"></i>
 						</div>
 						<h1>安心、安全。</h1>
-						<p>建築エリアは敵, 爆破, ロスト無し。<br>安心して建築できます。</p>
+						<p>建築エリアは敵, 爆破, ロスト無し。安心して建築できます！</p>
 					</div>
 				</div>
 				<div class="col-4 col-12-sm">
@@ -58,7 +56,7 @@
 							<i class="bi-question-circle-fill"></i>
 						</div>
 						<h1>充実サポート。</h1>
-						<p>専用Discordサーバーで質問すれば、<br />鯖民やスタッフが答えます。Wikiも充実しており、情報を探すのにうってつけです。</p>
+						<p>専用Discordサーバーで質問すれば、鯖民やスタッフが答えます。Wikiも充実しており、情報を探すのにうってつけです。</p>
 					</div>
 				</div>
 				<div class="col-4 col-12-sm">
@@ -67,97 +65,133 @@
 							<i class="bi-lightning-charge-fill"></i>
 						</div>
 						<h1>やりこみ要素</h1>
-						<p>様々なやりこみ要素を用意しています。また、定期的にイベントを開催する予定です。</p>
+						<p>様々なやりこみ要素があります。また、定期的にイベントをやってます！</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section>
-			<h2 class="underline"><i class="bi-arrow-repeat"></i> 対応バージョン</h2>
-			<table class="table">
-				<tbody>
-					<tr>
-						<td>Java版</td>
-						<td>1.18.2</td>
-					</tr>
-					<tr>
-						<td>統合版</td>
-						<td>1.18.0 - 1.18.31</td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="alert bg-warn">
-				<i class="icon bi-exclamation-triangle-fill"></i>
-				※統合版への対応は不安定であり、思わぬ不具合がある可能性があります。ご留意ください。
-			</div>
+
+		<section id="world">
+			<h2><i class="bi-geo-alt"></i> 個性豊かなワールド</h2>
+			本サーバーには、目的ごとにいくつかのワールドがあります。
+			<h3><i class="bi-building"></i> メインワールド</h3>
+			<p>みんなが生活するワールドです。広い土地に自分だけの「自治体」（後述します）を宣言するか、誰かの自治体に参加して、一緒に街づくりを楽しもう。</p>
+
+			<h3><i class="bi-tree"></i> ワイルドエリア</h3>
+			<p>資源が取り放題のワイルドエリアで、好きなだけ採掘・冒険しよう。</p>
+			<p>ワイルドエリアAには、鯖民が築き上げた共有畑・共有牧場・共有拠点がそびえ立っており、誰でも使えるアイテムとブロックがあります。</p>
+			<p>ワイルドエリアBでは、毎月定期的にリセットされる手つかずの世界を味わえます！<br/>Minecraftの最新アップデートに合わせてワールドも新しくなるので、新要素にすぐに触れられます！</p>
+
+			<h3><i class="bi-boxes"></i> サンドボックス</h3>
+			<p>クリエイティブモードで自由に建築！お家の試作から、レッドストーンの実験まで、幅広くお使いいただけます。</p>
+			<p>もう一つのサンドボックス「アートワールド」では、より高レベルなクリエイティブ建築をお楽しみいただけます。</p>
+			<p><a href="https://wiki.craft.xeltica.work/ja/worlds" target="_blank" rel="noreferrer noopener" class="btn info"><i class="bi-arrow-right"></i> ワールドについて詳しく…</a></p>
 		</section>
-		<section>
-			<h2 class="underline"><i class="bi-person-fill"></i> ロール</h2>
+
+		<section id="municipality">
+			<h2><i class="bi-building"></i> 自治体システム</h2>
+			<p>
+				<strong>メインワールド</strong>には、現在20を超える自治体が存在します。<br/>
+				海に沈んだ町、田舎風の町、地獄のような町と…、個性豊かな自治体があなたを待っています。
+			</p>
+			<p>
+				誰かの自治体に参加することも、自分だけの自治体を作ることもできます！
+			</p>
+			<p>
+				なお、多くの建国サーバーにあるような「戦争」システムは<strong>本サーバーにはありません</strong>。
+				平和にゆっくり街づくりをしたい…、そんなあなたにオススメです！
+			</p>
+			<p><a href="https://wiki.craft.xeltica.work/ja/cities" target="_blank" rel="noreferrer noopener" class="btn info"><i class="bi-arrow-right"></i> 自治体システムについて詳しく…</a></p>
+		</section>
+
+		<!-- <section>
+			<h2><i class="bi-person-fill"></i> ロール</h2>
 			<p>
 				本サーバーでは荒らし対策のため、<b class="_wakaba">わかば</b>、<b class="_citizen">市民</b>という2つのプレイヤーロールがあります。
 				初参加プレイヤーは全てわかばです。<b class="_wakaba">わかば</b>にはいくつかの機能制限がありますが、
 				<b class="_citizen">市民</b>への昇格プロセスを行うことで制限を突破できます！
 			</p>
 			<p>市民に昇格する方法については、<a href="/docs/citizen">昇格システム</a>をお読みください！</p>
+		</section> -->
+
+		<section id="version">
+			<h2><i class="bi-arrow-repeat"></i> 対応バージョン</h2>
+			<p>本サーバーは、<strong>Java版および統合版、どちらからでもご参加いただけます！</strong><br/>ただし、統合版への対応は不安定であり、思わぬ不具合がある可能性があります。ご留意ください。</p>
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>Java版</th>
+						<td>1.18.2 - 1.19</td>
+					</tr>
+					<tr>
+						<th>統合版</th>
+						<td>1.19.0 - 1.19.10</td>
+					</tr>
+				</tbody>
+			</table>
 		</section>
+
 		<section>
-			<h2 class="underline"><i class="bi-door-open-fill"></i> 参加する！</h2>
-			<p>もし興味がありましたら、<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上でぜひ入ってみてください。観光だけでも楽しいかもしれません。</p>
+			<h2><i class="bi-discord"></i> Discord</h2>
+			<p>XelticaMCには、公式Discordサーバーがあります。</p>
+			<p>鯖民同士の情報交換やふれあいが盛んに行われています。マイクラ以外のゲームでも遊んでいたりと、本サーバーのハブとして重要なサーバーですので、お入りいただくことを推奨します。</p>
+			<p>また、重要なお知らせや、一部のイベントの会場にもなっています。</p>
+			<p>参加には、<a href="https://discord.com" target="_blank" rel="noreferrer noopener">Discord</a>への無料登録が必要です。</p>
+			<a class="btn primary discord" href="https://discord.gg/3zuQwTASye">参加する！</a>
+		</section>
 
-			<button class="btn primary mb-2" v-if="!showAddrs" @click="showAddrs = !showAddrs" :class="{active: showAddrs}">
-				<i class="bi-check2"></i> 利用規約を読んだ
-			</button>
-			<template  v-else>
-				<table class="table addrs">
-					<tbody>
-						<tr>
-							<td>アドレス</td>
-							<td>
-								play.craft.xeltica.work
-								<button class="copy-button" @click="copy('play.craft.xeltica.work')">コピー</button>
-							</td>
-						</tr>
-						<tr>
-							<td>ポート(Java版)</td>
-							<td>
-								25565
-								<button class="copy-button" @click="copy('25565')">コピー</button>
-							</td>
-						</tr>
-						<tr>
-							<td>ポート(統合版)</td>
-							<td>
-								19132
-								<button class="copy-button" @click="copy('19132')">コピー</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+		<section>
+			<h2><i class="bi-door-open"></i> 参加する！</h2>
+			<p>興味が湧いてきましたか？<strong>本サーバーの<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
 
-				<p>
-				  iOS, Android, Windows 10バージョンをご利用の方は、下のボタンからMinecraftを起動すると、XelticaMCがサーバーリストに追加されます！
-				  <br/>
-					<a href="minecraft://?addExternalServer=XelticaMC|play.craft.xeltica.work:19132" class="btn primary">
-						<i class="bi-arrow-right"></i>
-						サーバーリストに追加する
-					</a>
-				</p>
-			</template>
+			<table class="table addrs">
+				<tbody>
+					<tr>
+						<th>アドレス</th>
+						<td class="copy-cell" role="button" @click="copy('play.craft.xeltica.work')">
+							play.craft.xeltica.work
+							<span class="copy-button">コピー</span>
+						</td>
+					</tr>
+					<tr>
+						<th>ポート(Java版)</th>
+						<td class="copy-cell" role="button" @click="copy('25565')">
+							25565
+							<span class="copy-button">コピー</span>
+						</td>
+					</tr>
+					<tr>
+						<th>ポート(統合版)</th>
+						<td class="copy-cell" role="button" @click="copy('19132')">
+							19132
+							<span class="copy-button">コピー</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
-			<p>細かい遊び方は、<RouterLink to="/docs/walkthrough">あるきかた</RouterLink>をご確認ください！</p>
+			<p>サーバーの入り方および、入った後の遊び方については、<RouterLink to="/docs/walkthrough"><strong>あるきかた</strong></RouterLink>をご確認ください！</p>
+			<p>ご参加、お待ちしております！！</p>
 
 		</section>
+
 		<section>
-			<h2 class="underline"><i class="bi-share-fill"></i> シェア</h2>
+			<h2><i class="bi-share"></i> シェア</h2>
 			<p>
-				サーバーで起きた出来事を自由にシェアしてください。
+				サーバーでの面白い出来事がありましたら、是非SNSにシェアしてください…！
 				<strong style="color: var(--accent)">#XelticaMC</strong> ハッシュタグの使用をおすすめしています。
 			</p>
-		</section>
-		<section>
-			<h2 class="underline"><i class="bi-discord"></i> Discord</h2>
-			<p>Discord サーバーを用意しています。参加していなくても遊べますが、重要なお知らせや情報交換ができるので、何倍も楽しめます！是非入ってください！もちろん、登録は無料です！</p>
-			<a class="btn primary discord" href="https://discord.gg/3zuQwTASye">参加する！</a>
+			<div class="hstack">
+				<a href="https://twitter.com/search?q=%23XelticaMC&src=typed_query&f=live" target="_blank" rel="noreferrer noopener" class="btn primary" style="--primary: #1DA1F2">
+					<i class="bi-search"></i> Twitter
+				</a>
+				<a href="https://misskey.io/tags/XelticaMC" target="_blank" rel="noreferrer noopener" class="btn primary" style="--primary: #86b300">
+					<i class="bi-search"></i> Misskey
+				</a>
+				<a href="https://www.instagram.com/explore/search/keyword/?q=%23XelticaMC" target="_blank" rel="noreferrer noopener" class="btn primary" style="--primary: #E4405F">
+					<i class="bi-search"></i> Instagram
+				</a>
+			</div>
 		</section>
 	</article>
 </template>
@@ -277,6 +311,11 @@ export default defineComponent({
 	&:active {
 		filter: brightness(0.8);
 	}
+}
+
+.copy-cell {
+	cursor: pointer;
+	user-select: none;
 }
 
 .ic0acan3 {
