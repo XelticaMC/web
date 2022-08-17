@@ -1,32 +1,5 @@
 <template>
 	<article class="ic0acan3">
-		<h2 class="text-125 mt-0">スタッフブログ</h2>
-		<p class="vstack slim" v-if="posts == null || posts.length === 0">
-			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
-			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
-			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
-			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
-			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
-		</p>
-		<template v-else>
-			<div class="menu">
-				<section>
-					<a
-						class="item"
-						:href="post.link"
-						target="_blank"
-						rel="noreferrer noopener"
-						v-for="post in posts"
-						:key="post.id"
-					>
-						<span class="icon"><i class="bi bi-chevron-right"/></span>
-						{{post.title}}
-					</a>
-				</section>
-			</div>
-			<a href="https://blog.craft.xeltica.work" target="_blank" rel="noreferrer noopener">もっと見る</a>
-		</template>
-
 		<section id="hero" class="text-center">
 			<img :src="imagePath" class="fluid shadow-4 mt-4" style="border-radius: var(--radius)" />
 			<h1 class="mt-3 text-150" style="white-space: nowrap">
@@ -74,17 +47,28 @@
 		<section id="world">
 			<h2><i class="bi-geo-alt"></i> 個性豊かなワールド</h2>
 			本サーバーには、目的ごとにいくつかのワールドがあります。
-			<h3><i class="bi-building"></i> メインワールド</h3>
-			<p>みんなが生活するワールドです。広い土地に自分だけの「自治体」（後述します）を宣言するか、誰かの自治体に参加して、一緒に街づくりを楽しもう。</p>
 
-			<h3><i class="bi-tree"></i> ワイルドエリア</h3>
-			<p>資源が取り放題のワイルドエリアで、好きなだけ採掘・冒険しよう。</p>
-			<p>ワイルドエリアAには、鯖民が築き上げた共有畑・共有牧場・共有拠点がそびえ立っており、誰でも使えるアイテムとブロックがあります。</p>
-			<p>ワイルドエリアBでは、毎月定期的にリセットされる手つかずの世界を味わえます！<br/>Minecraftの最新アップデートに合わせてワールドも新しくなるので、新要素にすぐに触れられます！</p>
+			<h3><i class="bi-building"></i> メインワールド</h3>
+			<p>みんなが生活するワールドです。</p>
+			<p>自由建築区に家を建てて、生活をしよう。</p>
+			<p>また、広い土地に自分だけの「自治体」を宣言したり、誰かの自治体に参加して、一緒に街づくりを楽しめます。</p>
+
+			<h3><i class="bi-boxes"></i> 共有ワールド</h3>
+			<p>鯖民が資材を共有し合うワールドです。</p>
+			<p>共有畑・共有牧場・共有拠点が設置されており、誰でも使えるアイテムとブロックがあります。</p>
+			<p>序盤の生活基盤を整えるためにご活用ください。もし慣れてきたら、余ったアイテムを共有してくれるとありがたいです。</p>
+			<p>また、共有ワールドでは、申請することでTTを作成・設置できます。</p>
+
+			<h3><i class="bi-tree"></i> 資源ワールド</h3>
+			<p>毎月定期的にリセットされる、手つかずなワールドです。</p>
+			<p>建築資材や鉱石などを探す場合は、こちらをご利用ください！</p>
+			<p>Minecraftの最新アップデートに合わせてワールドも新しくなるので、新要素にすぐに触れられます！</p>
+			<p></p>
 
 			<h3><i class="bi-boxes"></i> サンドボックス</h3>
 			<p>クリエイティブモードで自由に建築！お家の試作から、レッドストーンの実験まで、幅広くお使いいただけます。</p>
 			<p>もう一つのサンドボックス「アートワールド」では、より高レベルなクリエイティブ建築をお楽しみいただけます。</p>
+
 			<p><a href="https://wiki.craft.xeltica.work/ja/worlds" target="_blank" rel="noreferrer noopener" class="btn info"><i class="bi-arrow-right"></i> ワールドについて詳しく…</a></p>
 		</section>
 
@@ -193,6 +177,33 @@
 				</a>
 			</div>
 		</section>
+
+		<h2>スタッフブログ</h2>
+		<section class="vstack slim" v-if="posts == null || posts.length === 0">
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+			<div class="skeleton" style="height: 24px" :style="{width: `${Math.floor(Math.random() * 70) + 30}%`}" />
+		</section>
+		<template v-else>
+			<div class="menu">
+				<section>
+					<a
+						class="item"
+						:href="post.link"
+						target="_blank"
+						rel="noreferrer noopener"
+						v-for="post in posts"
+						:key="post.id"
+					>
+						<span class="icon"><i class="bi bi-chevron-right"/></span>
+						{{post.title}}
+					</a>
+				</section>
+			</div>
+			<a href="https://blog.craft.xeltica.work" target="_blank" rel="noreferrer noopener">もっと見る</a>
+		</template>
 	</article>
 </template>
 
