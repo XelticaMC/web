@@ -21,6 +21,10 @@ const router = createRouter({
 			redirect: _ => '/rule',
 		},
 		{
+			path: '/rule',
+			redirect: _ => 'https://xeltica.notion.site/bc371913cbfe4123b6272def347e6abc',
+		},
+		{
 			path: '/docs/:path(.*)',
 			redirect: to => {
 				window.location.href = (`https://wiki.craft.xeltica.work/${to.params.path}`);
