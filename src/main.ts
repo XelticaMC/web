@@ -6,6 +6,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import 'xeltica-ui/dist/css/xeltica-ui.min.css';
 import App from './App.vue';
+import { RULE_URL } from './scripts/consts';
 import * as Themes from './scripts/theme';
 import './style.scss';
 
@@ -22,7 +23,10 @@ const router = createRouter({
 		},
 		{
 			path: '/rule',
-			redirect: _ => 'https://xeltica.notion.site/bc371913cbfe4123b6272def347e6abc',
+			redirect: () => {
+				window.location.href = RULE_URL;
+				return '';
+			},
 		},
 		{
 			path: '/docs/:path(.*)',

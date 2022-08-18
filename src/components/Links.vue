@@ -19,7 +19,7 @@
 		</section>
 		<section>
 			<h1>各種規約</h1>
-			<a class="item" href="https://xeltica.notion.site/bc371913cbfe4123b6272def347e6abc" target="_blank" rel="noopener noreferrer" active-class="active">
+			<a class="item" :href="RULE_URL" target="_blank" rel="noopener noreferrer" active-class="active">
 				サーバールール
 				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
 			</a>
@@ -51,8 +51,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { RULE_URL } from '../scripts/consts';
+
 export default defineComponent({
 	name: 'Links',
+	data() {
+		return {
+			RULE_URL
+		}
+	},
 })
 </script>
 

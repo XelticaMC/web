@@ -126,7 +126,7 @@
 
 		<section>
 			<h2><i class="bi-door-open"></i> 参加する！</h2>
-			<p>興味が湧いてきましたか？<strong>本サーバーの<a href="https://craft.xeltica.work/rule">サーバールール</a>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
+			<p>興味が湧いてきましたか？<strong>本サーバーの<a :href="RULE_URL">サーバールール</a>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
 
 			<table class="table addrs">
 				<tbody>
@@ -218,6 +218,7 @@ import day from '../assets/day.jpg';
 import night from '../assets/night.jpg';
 import { osTheme, theme } from '../scripts/theme';
 import { posts, fetchPosts, isFetching, hasError } from '../scripts/blog';
+import { RULE_URL } from '../scripts/consts';
 
 import 'vue3-carousel/dist/carousel.css';
 
@@ -253,6 +254,7 @@ export default defineComponent({
 			imagePath,
 			caution,
 			showAddrs: ref(false),
+			RULE_URL,
 			slides: [
 				'press/wheat.jpg',
 				'press/town.jpg',
