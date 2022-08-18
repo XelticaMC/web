@@ -126,7 +126,7 @@
 
 		<section>
 			<h2><i class="bi-door-open"></i> 参加する！</h2>
-			<p>興味が湧いてきましたか？<strong>本サーバーの<RouterLink to="/docs/rule">利用規約</RouterLink>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
+			<p>興味が湧いてきましたか？<strong>本サーバーの<a href="https://craft.xeltica.work/rule">サーバールール</a>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
 
 			<table class="table addrs">
 				<tbody>
@@ -156,7 +156,6 @@
 
 			<p>サーバーの入り方および、入った後の遊び方については、<RouterLink to="/docs/walkthrough"><strong>あるきかた</strong></RouterLink>をご確認ください！</p>
 			<p>ご参加、お待ちしております！！</p>
-
 		</section>
 
 		<section>

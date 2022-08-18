@@ -1,10 +1,6 @@
 <template>
 	<div class="menu">
 		<section>
-			<RouterLink class="item" to="/rule" active-class="active">
-				<span class="icon"><i class="bi bi-exclamation-diamond-fill"/></span>
-				利用規約
-			</RouterLink>
 			<a class="item" href="https://map.craft.xeltica.work" target="_blank" rel="noopener noreferrer">
 				<span class="icon"><i class="bi bi-geo-alt-fill"/></span>
 				ウェブマップ
@@ -22,6 +18,18 @@
 			</a>
 		</section>
 		<section>
+			<h1>各種規約</h1>
+			<a class="item" href="https://xeltica.notion.site/bc371913cbfe4123b6272def347e6abc" target="_blank" rel="noopener noreferrer" active-class="active">
+				サーバールール
+				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
+			</a>
+			<a class="item" href="https://www.notion.so/xeltica/be132dc09394471f8cb7fc1a7bb8b92e" target="_blank" rel="noopener noreferrer" active-class="active">
+				コミュニティガイドライン
+				<span class="icon ml-1"><i class="bi bi-box-arrow-up-right"/></span>
+			</a>
+		</section>
+		<section>
+			<h1>メディア</h1>
 			<a class="item" href="https://twitter.com/XelticaMC">
 				<span class="icon"><i class="bi bi-twitter"/></span>
 				公式ツイッター
