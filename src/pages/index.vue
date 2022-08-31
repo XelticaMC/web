@@ -109,7 +109,7 @@
 					</tr>
 					<tr>
 						<th>統合版</th>
-						<td>1.19.0 - 1.19.20</td>
+						<td>1.19.0 - 1.19.21</td>
 					</tr>
 				</tbody>
 			</table>
@@ -126,8 +126,16 @@
 
 		<section>
 			<h2><i class="bi-door-open"></i> 参加する！</h2>
-			<p>興味が湧いてきましたか？<strong>本サーバーの<a :href="RULE_URL">サーバールール</a>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
+			<p>興味が湧いてきましたか？<p>
+			<p>参加するには、XelticaMC 公式Discordサーバーへの参加が必要です。</p>
+			<p>鯖民同士の情報交換やふれあいが盛んに行われています。マイクラ以外のゲームでもたまに遊んでいます。</p>
+			<p>本サーバーのプレイヤーにとって重要な情報を常に配信している場所でもありますので、必ずご参加ください。</p>
+			<p>
+				参加には、<a href="https://discord.com" target="_blank" rel="noreferrer noopener">Discord</a>への無料登録が必要です。
+				<a class="btn primary discord" href="https://discord.gg/3zuQwTASye">参加する！</a>
+			</p>			
 
+			<p>あとは、<strong>本サーバーの<a :href="RULE_URL">サーバールール</a>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
 			<table class="table addrs">
 				<tbody>
 					<tr>
