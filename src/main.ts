@@ -10,8 +10,6 @@ import { RULE_URL } from './scripts/consts';
 import * as Themes from './scripts/theme';
 import './style.scss';
 
-
-
 Themes.syncTheme();
 
 const router = createRouter({
