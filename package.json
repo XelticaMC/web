@@ -7,29 +7,21 @@
 		"build-fast": "vite build"
 	},
 	"dependencies": {
-		"@iconify/icons-mdi-light": "^1.1.0",
-		"@iconify/json": "^1.1.290",
 		"@types/markdown-it": "^12.0.1",
 		"@vueuse/head": "^0.2.3",
 		"markdown-it": "^12.0.4",
-		"normalize.css": "^8.0.1",
 		"striptags": "^3.2.0",
-		"vue": "^3.0.5",
-		"vue-router": "^4",
-		"vue3-carousel": "^0.1.36",
+		"vue": "^3.2.38",
+		"vue-router": "^4.1.5",
 		"xeltica-ui": "xeltica/design-system"
 	},
 	"devDependencies": {
-		"@iconify/vue": "^2.0.0-rc.2",
-		"@vitejs/plugin-vue": "^1.0.4",
-		"@vue/compiler-sfc": "^3.0.5",
+		"@vitejs/plugin-vue": "^3.0.3",
 		"@vuedx/typecheck": "^0.4.1",
 		"@vuedx/typescript-plugin-vue": "^0.4.1",
 		"sass": "^1.32.4",
 		"typescript": "^4.1.3",
-		"vite": "^2.0.0-beta.60",
-		"vite-plugin-components": "^0.6.6",
-		"vite-plugin-icons": "^0.2.1",
+		"vite": "^3.0.9",
 		"vite-plugin-voie": "^0.7.3"
 	}
 }

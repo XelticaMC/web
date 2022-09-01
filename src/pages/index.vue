@@ -121,7 +121,7 @@
 			<p>参加するには、まずは<strong>XelticaMC 公式Discordサーバー</strong>へご参加ください。</p>
 			<p>
 				参加には、<a href="https://discord.com" target="_blank" rel="noreferrer noopener">Discord</a>への無料登録が必要です。<br/>
-				<a class="btn block primary discord" href="https://discord.gg/3zuQwTASye">参加する！</a>
+				<a class="btn primary discord" href="https://discord.gg/3zuQwTASye">参加する！</a>
 			</p>
 
 			<p>あとは、<strong>本サーバーの<a :href="RULE_URL">サーバールール</a>をお読み頂いた上で</strong>、ぜひご参加ください！</p>
@@ -215,8 +215,6 @@ import night from '../assets/night.jpg';
 import { osTheme, theme } from '../scripts/theme';
 import { posts, fetchPosts, isFetching, hasError } from '../scripts/blog';
 import { RULE_URL } from '../scripts/consts';
-
-import 'vue3-carousel/dist/carousel.css';
 
 type Caution = {
 	title: string;

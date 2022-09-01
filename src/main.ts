@@ -1,5 +1,3 @@
-// import 'normalize.css';
-
 import { createHead } from '@vueuse/head';
 import routes from 'voie-pages';
 import { createApp } from 'vue';
