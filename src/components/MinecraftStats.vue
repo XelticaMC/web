@@ -1,14 +1,14 @@
 <template>
-	<div class="vstack">
+	<div class="vstack card pa-1">
 		<div><b>ユーザー数: </b>{{players.length}}</div>
 		<ul class="users" v-for="item in featuredPlayers" :key="item.uuid">
 			<li class="user">
-				<img class="avatar" :src="`https://crafatar.com/avatars/${item.uuid}?overlay`" :alt="item.displayName" :title="item.displayName"/>
+				<img class="avatar" :src="skin(item.uuid)" :alt="item.displayName" :title="item.displayName"/>
 				<span class="name" v-text="item.displayName"/>
 			</li>
 		</ul>
 		<div class="faces" v-if="otherPlayers && otherPlayers.length > 0">
-			<img v-for="item in otherPlayers" :key="item.uuid" class="avatar" :alt="item.displayName" :title="item.displayName" :src="`https://crafatar.com/avatars/${item.uuid}?overlay`"/>
+			<img v-for="item in otherPlayers" :key="item.uuid" class="avatar" :alt="item.displayName" :title="item.displayName" :src="skin(item.uuid)"/>
 		</div>
 		<div v-if="hasError" class="error">
 			取得に失敗しました。
@@ -35,12 +35,17 @@ export default defineComponent({
 			hasError,
 			isFetching,
 			fetchPlayers,
+			skin(uuid: string) {
+				return `https://api.tydiumcraft.net/v1/players/skin?uuid=${uuid}&type=head`;
+			},
 		};
 	},
 })
 </script>
 
 <style lang="scss" scoped>
+$avatarSize: 2rem;
+
 h2 {
 	font-size: 1rem;
 }
@@ -77,8 +82,8 @@ h2 {
 }
 
 .avatar {
-	width: 1.4rem;
-	height: 1.4rem;
-	border-radius: 100%;
+	width: $avatarSize;
+	height: $avatarSize;
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 </style>
