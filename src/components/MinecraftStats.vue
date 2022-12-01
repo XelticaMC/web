@@ -1,15 +1,12 @@
 <template>
 	<div class="vstack card pa-1">
 		<div><b>ユーザー数: </b>{{players.length}}</div>
-		<ul class="users" v-for="item in featuredPlayers" :key="item.uuid">
-			<li class="user">
+		<ul class="users vstack">
+			<li class="user" v-for="item in players" :key="item.uuid">
 				<img class="avatar" :src="skin(item.uuid)" :alt="item.displayName" :title="item.displayName"/>
 				<span class="name" v-text="item.displayName"/>
 			</li>
 		</ul>
-		<div class="faces" v-if="otherPlayers && otherPlayers.length > 0">
-			<img v-for="item in otherPlayers" :key="item.uuid" class="avatar" :alt="item.displayName" :title="item.displayName" :src="skin(item.uuid)"/>
-		</div>
 		<div v-if="hasError" class="error">
 			取得に失敗しました。
 			<button @click="fetchPlayers">再試行</button>
@@ -30,8 +27,6 @@ export default defineComponent({
 	setup() {
 		return {
 			players,
-			featuredPlayers: computed(() => players.value.slice(0, 5)),
-			otherPlayers: computed(() => players.value.slice(5)),
 			hasError,
 			isFetching,
 			fetchPlayers,
@@ -62,6 +57,8 @@ h2 {
 .users {
 	margin: 0;
 	padding: 0;
+	max-height: 230px;
+	overflow: auto;
 
 	> .user {
 		margin-bottom: 1px;
