@@ -3,7 +3,7 @@
 		<section id="hero" class="text-center">
 			<img :src="imagePath" class="fluid shadow-4 mt-4" style="border-radius: var(--radius)" />
 			<h1 class="mt-3 text-150" style="white-space: nowrap">
-				集まれ、すべてのクラフター。
+				集まれ、<wbr/>すべてのクラフター。
 			</h1>
 			<div class="caution" v-if="caution">
 				<RouterLink :to="caution.link">{{ caution.name }}</RouterLink>
@@ -12,33 +12,36 @@
 			<p>毎日が退屈でつまらない？あなたも<strong>XelticaMC</strong>で生活してみませんか？</p>
 		</section>
 
-		<section class="features">
-			<div class="row">
-				<div class="col-4 col-12-sm">
-					<div class="vstack feature text-center">
-						<div class="circle bg-pink text-white">
-							<i class="bi-heart-fill"></i>
-						</div>
-						<h1>安心、安全。</h1>
-						<p>建築エリアは敵, 爆破, ロスト無し。安心して建築できます！</p>
+		<section class="row features">
+			<div class="col-6 col-12-sm">
+				<div class="card bg-pink text-white feature">
+					<div class="body">
+						<h1><i class="bi-heart-fill"></i> 安心、安全</h1>
+						<p>建築エリアは敵、爆破、ロスト無し。安心安全のワールド設定で、建築に集中できます！</p>
 					</div>
 				</div>
-				<div class="col-4 col-12-sm">
-					<div class="vstack feature text-center">
-						<div class="circle bg-green text-white">
-							<i class="bi-question-circle-fill"></i>
-						</div>
-						<h1>充実サポート。</h1>
+			</div>
+			<div class="col-6 col-12-sm">
+				<div class="card bg-green text-white feature">
+					<div class="body">
+						<h1><i class="bi-question-circle-fill"></i> 充実サポート</h1>
 						<p>専用Discordサーバーで質問すれば、鯖民やスタッフが答えます。Wikiも充実しており、情報を探すのにうってつけです。</p>
 					</div>
 				</div>
-				<div class="col-4 col-12-sm">
-					<div class="vstack fill feature text-center">
-						<div class="circle bg-blue text-white">
-							<i class="bi-lightning-charge-fill"></i>
-						</div>
-						<h1>やりこみ要素</h1>
+			</div>
+			<div class="col-6 col-12-sm">
+				<div class="card bg-blue text-white feature">
+					<div class="body">
+						<h1><i class="bi-lightning-charge-fill"></i> やりこみ要素</h1>
 						<p>様々なやりこみ要素があります。また、定期的にイベントをやってます！</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 col-12-sm">
+				<div class="card bg-yellow text-black feature">
+					<div class="body">
+						<h1><i class="bi bi-universal-access-circle"></i> クロスプレイ</h1>
+						<p>Java版と統合版のクロスプレイを実現。端末を超えて、友達と遊べます！</p>
 					</div>
 				</div>
 			</div>
@@ -88,16 +91,6 @@
 			<p><a href="https://wiki.craft.xeltica.work/ja/cities" target="_blank" rel="noreferrer noopener" class="btn info"><i class="bi-arrow-right"></i> 自治体システムについて詳しく…</a></p>
 		</section>
 
-		<!-- <section>
-			<h2><i class="bi-person-fill"></i> ロール</h2>
-			<p>
-				本サーバーでは荒らし対策のため、<b class="_wakaba">わかば</b>、<b class="_citizen">市民</b>という2つのプレイヤーロールがあります。
-				初参加プレイヤーは全てわかばです。<b class="_wakaba">わかば</b>にはいくつかの機能制限がありますが、
-				<b class="_citizen">市民</b>への昇格プロセスを行うことで制限を突破できます！
-			</p>
-			<p>市民に昇格する方法については、<a href="/docs/citizen">昇格システム</a>をお読みください！</p>
-		</section> -->
-
 		<section id="version">
 			<h2><i class="bi-arrow-repeat"></i> 対応バージョン</h2>
 			<p>本サーバーは、<strong>Java版および統合版、どちらからでもご参加いただけます！</strong><br/>ただし、統合版への対応は不安定であり、思わぬ不具合がある可能性があります。ご留意ください。</p>
@@ -105,11 +98,11 @@
 				<tbody>
 					<tr>
 						<th>Java版</th>
-						<td>1.18.2 - 1.19.2</td>
+						<td>1.19.2</td>
 					</tr>
 					<tr>
 						<th>統合版</th>
-						<td>1.19.0 - 1.19.20</td>
+						<td>1.19.20 - 1.19.50</td>
 					</tr>
 				</tbody>
 			</table>
@@ -151,7 +144,7 @@
 				</tbody>
 			</table>
 
-			<p>サーバーの入り方および、入った後の遊び方については、<RouterLink to="/docs/walkthrough"><strong>あるきかた</strong></RouterLink>をご確認ください！</p>
+			<p>サーバーの入り方・遊び方については、<RouterLink to="/docs/walkthrough"><strong>あるきかた</strong></RouterLink>をご確認ください！</p>
 			<p>ご参加、お待ちしております！！</p>
 		</section>
 
@@ -161,7 +154,7 @@
 				サーバーでの面白い出来事がありましたら、是非SNSにシェアしてください…！
 				<strong style="color: var(--accent)">#XelticaMC</strong> ハッシュタグの使用をおすすめしています。
 			</p>
-			<div class="hstack">
+			<div class="hstack wrap">
 				<a href="https://twitter.com/search?q=%23XelticaMC&src=typed_query&f=live" target="_blank" rel="noreferrer noopener" class="btn primary" style="--primary: #1DA1F2">
 					<i class="bi-search"></i> Twitter
 				</a>
@@ -278,24 +271,12 @@ export default defineComponent({
 	margin: 32px auto;
 }
 
-.feature {
-	align-items: center;
-	padding: 0 1rem;
-	> .circle {
-		width: 96px;
-		height: 96px;
-		font-size: 48px;
-		line-height: 1;
-		border-radius: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 8px;
+.features {
+	> * {
+		height: 100%;
 	}
-	> h1 {
-		font-size: 1rem;
-		font-weight: bold;
-		margin: 0;
+	h1 {
+		margin-bottom: var(--margin);
 	}
 }
 

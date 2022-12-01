@@ -1,12 +1,18 @@
-import { createHead } from '@vueuse/head';
-import routes from 'voie-pages';
+// vite-env.d.ts
+/// <reference types="vite-plugin-pages/client" />
+
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import 'xeltica-ui/dist/css/xeltica-ui.min.css';
+import { createHead } from '@vueuse/head';
+
 import App from './App.vue';
 import { RULE_URL } from './scripts/consts';
 import * as Themes from './scripts/theme';
+
+import 'xeltica-ui/dist/css/xeltica-ui.min.css';
 import './style.scss';
+
+import routes from '~pages';
 
 Themes.syncTheme();
 
