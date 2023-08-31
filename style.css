@@ -1,0 +1,19 @@
+body {
+  font-family: "Koruri", sans-serif;
+}
+
+.centralized {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	> * {
+		max-width: 960px;
+	}
+}
+
+.icon {
+	height: 1em;
+	vertical-align: -0.16em;
+}
